@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="xyz.codepunk.PostsPageParserTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2020-08-25T10:28:25" hostname="megatron" time="0.247">
+<testsuite name="xyz.codepunk.PostsPageParserTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2020-08-25T12:03:02" hostname="megatron" time="0.168">
   <properties/>
-  <testcase name="testParsePosts" classname="xyz.codepunk.PostsPageParserTest" time="0.107"/>
-  <testcase name="testParseThreadId" classname="xyz.codepunk.PostsPageParserTest" time="0.012"/>
-  <testcase name="testParsePostAuthorJoinDate" classname="xyz.codepunk.PostsPageParserTest" time="0.004"/>
-  <testcase name="testParsePostElements" classname="xyz.codepunk.PostsPageParserTest" time="0.013"/>
-  <testcase name="testParse" classname="xyz.codepunk.PostsPageParserTest" time="0.033"/>
-  <testcase name="testParsePost" classname="xyz.codepunk.PostsPageParserTest" time="0.007"/>
-  <testcase name="testParsePostAuthorPostCount" classname="xyz.codepunk.PostsPageParserTest" time="0.003"/>
+  <testcase name="testParsePosts" classname="xyz.codepunk.PostsPageParserTest" time="0.094"/>
+  <testcase name="testParseThreadId" classname="xyz.codepunk.PostsPageParserTest" time="0.007"/>
+  <testcase name="testParsePostAuthorJoinDate" classname="xyz.codepunk.PostsPageParserTest" time="0.003"/>
+  <testcase name="testParsePostElements" classname="xyz.codepunk.PostsPageParserTest" time="0.007"/>
+  <testcase name="testParse" classname="xyz.codepunk.PostsPageParserTest" time="0.027"/>
+  <testcase name="testParsePost" classname="xyz.codepunk.PostsPageParserTest" time="0.005"/>
+  <testcase name="testParsePostAuthorPostCount" classname="xyz.codepunk.PostsPageParserTest" time="0.002"/>
   <testcase name="testParseTotalThreadPosts" classname="xyz.codepunk.PostsPageParserTest" time="0.006"/>
   <testcase name="testParsePostAuthorUsername" classname="xyz.codepunk.PostsPageParserTest" time="0.003"/>
-  <testcase name="testParsePostContent" classname="xyz.codepunk.PostsPageParserTest" time="0.003"/>
-  <testcase name="testParsePostAuthor" classname="xyz.codepunk.PostsPageParserTest" time="0.008"/>
-  <testcase name="testParsePostAuthorId" classname="xyz.codepunk.PostsPageParserTest" time="0.027"/>
-  <testcase name="testParsePostDate" classname="xyz.codepunk.PostsPageParserTest" time="0.01"/>
-  <system-out><![CDATA[eweerewr
-eweerewr
-eweerewr
-eweerewr
-eweerewr
-eweerewr
-]]></system-out>
+  <testcase name="testParsePostContent" classname="xyz.codepunk.PostsPageParserTest" time="0.002"/>
+  <testcase name="testParsePostAuthor" classname="xyz.codepunk.PostsPageParserTest" time="0.003"/>
+  <testcase name="testParsePostAuthorId" classname="xyz.codepunk.PostsPageParserTest" time="0.002"/>
+  <testcase name="testParsePostDate" classname="xyz.codepunk.PostsPageParserTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

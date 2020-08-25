@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class PostsPageTest extends TestCase {
 
     @Test
-    public void constructor() {
+    public void testPostsPage() {
         final ArrayList<Post> posts = new ArrayList<>();
         final String joined = "Tue Oct 29, 2019 07:09";
         final String postDate = "Wed Oct 30, 2019 07:09";

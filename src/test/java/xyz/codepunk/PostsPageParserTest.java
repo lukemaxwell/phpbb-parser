@@ -88,8 +88,8 @@ public class PostsPageParserTest extends TestCase {
     }
 
     @Test
-    public void testParsePostElements() {
-        assertEquals(2, PHPBBParser.parsePostElements(pageHtml).size());
+    public void testParsePostElements() throws ParserException {
+        assertEquals(2, PostsPageParser.parsePostElements(pageHtml).size());
     }
 
     public void testParse() throws ParserException {

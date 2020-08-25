@@ -19,7 +19,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes "Main-Class": "xyz.codepunk.PHPBBParser"
+        attributes "Main-Class": "xyz.codepunk.PostsPageParser"
     }
 
     from {

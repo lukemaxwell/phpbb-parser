@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class PostTest extends TestCase {
     @Test
-    public void constructor() {
+    public void testPost() {
         final String joined = "Tue Oct 29, 2019 07:09";
         final String postDate = "Wed Dec 30, 2019 07:09";
         final Author author = new Author(123, "Mr T", 25, joined);
