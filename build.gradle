@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'jacoco'
 }
 
 group 'xyz.codepunk'
@@ -15,6 +16,7 @@ dependencies {
     // jsoup HTML parser library @ https://jsoup.org/
     compile 'org.jsoup:jsoup:1.13.1'
     compile 'net.joshka:junit-json-params:1.1.0'
+
 }
 
 jar {
@@ -30,3 +32,12 @@ jar {
 application {
     mainClassName = 'xyz.codepunk.PHPBBParser'
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+check.dependsOn jacocoTestReport
