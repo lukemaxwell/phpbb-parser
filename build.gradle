@@ -4,6 +4,7 @@ plugins {
     id 'jacoco'
 }
 
+
 group 'xyz.codepunk'
 version '1.0-SNAPSHOT'
 
@@ -15,8 +16,6 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     // jsoup HTML parser library @ https://jsoup.org/
     compile 'org.jsoup:jsoup:1.13.1'
-    compile 'net.joshka:junit-json-params:1.1.0'
-
 }
 
 jar {
@@ -30,7 +29,7 @@ jar {
 }
 
 application {
-    mainClassName = 'xyz.codepunk.PHPBBParser'
+    mainClassName = 'xyz.codepunk.PostsPageParser'
 }
 
 jacocoTestReport {
