@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="xyz.codepunk.PHPBBParserTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2020-08-21T12:26:44" hostname="megatron" time="0.233">
+  <properties/>
+  <testcase name="parsePostAuthorId" classname="xyz.codepunk.PHPBBParserTest" time="0.082"/>
+  <testcase name="parsePost" classname="xyz.codepunk.PHPBBParserTest" time="0.024"/>
+  <testcase name="parseUrlParam" classname="xyz.codepunk.PHPBBParserTest" time="0.01"/>
+  <testcase name="parsePostAuthorJoinDate" classname="xyz.codepunk.PHPBBParserTest" time="0.009"/>
+  <testcase name="parsePosts" classname="xyz.codepunk.PHPBBParserTest" time="0.002"/>
+  <testcase name="parsePostAuthorPostCount" classname="xyz.codepunk.PHPBBParserTest" time="0.004"/>
+  <testcase name="parsePostAuthorUsername" classname="xyz.codepunk.PHPBBParserTest" time="0.004"/>
+  <testcase name="parsePostDate" classname="xyz.codepunk.PHPBBParserTest" time="0.019"/>
+  <testcase name="main" classname="xyz.codepunk.PHPBBParserTest" time="0.001"/>
+  <testcase name="parseThreadId" classname="xyz.codepunk.PHPBBParserTest" time="0.048"/>
+  <testcase name="parsePostContent" classname="xyz.codepunk.PHPBBParserTest" time="0.003"/>
+  <testcase name="parsePostElements" classname="xyz.codepunk.PHPBBParserTest" time="0.022"/>
+  <testcase name="parseUrlParams" classname="xyz.codepunk.PHPBBParserTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
