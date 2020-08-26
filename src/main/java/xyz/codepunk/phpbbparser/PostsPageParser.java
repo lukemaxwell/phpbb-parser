@@ -23,7 +23,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the full page html
      * @return the thread ID
-     * @throws ParserException
+     * @throws ParserException if thread ID cannot be parsed
      */
     public static int parseThreadId(String html) throws ParserException {
         final Document document = Jsoup.parse(html);
@@ -44,7 +44,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post html
      * @return the {@link Post}
-     * @throws ParserException
+     * @throws ParserException if post cannot be parsed
      */
     public static Post parsePost(String html) throws ParserException {
         try {
@@ -64,7 +64,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post html
      * @return an {@link Author} instance
-     * @throws ParserException
+     * @throws ParserException if author cannot be parsed
      */
     public static Author parsePostAuthor(String html) throws ParserException {
         try {
@@ -85,7 +85,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post htmll
      * @return the post content text
-     * @throws ParserException
+     * @throws ParserException if content cannot be parsed
      */
     public static String parsePostContent(String html) throws ParserException {
        try {
@@ -102,7 +102,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post html
      * @return the post date as a string
-     * @throws ParserException
+     * @throws ParserException if post date cannot be parsed
      */
     public static String parsePostDate(String html) throws ParserException {
       try {
@@ -119,7 +119,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post html
      * @return the integer post count
-     * @throws {@link ParserException}
+     * @throws ParserException if author post count cannot be parsed
      */
 
     public static int parsePostAuthorPostCount(String html) throws ParserException {
@@ -139,7 +139,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post html
      * @return the author username
-     * @throws {@link ParserException}
+     * @throws ParserException if author username cannot be parsed
      */
     public static String parsePostAuthorUsername(String html) throws ParserException {
 
@@ -173,7 +173,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post html
      * @return the integer ID
-     * @throws {@link ParserException}
+     * @throws ParserException if author ID cannot be parsed
      */
     public static int parsePostAuthorId(String html) throws ParserException {
         final Document document = Jsoup.parse(html);
@@ -196,7 +196,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the post html
      * @return the author join date as string
-     * @throws {@link ParserException}
+     * @throws ParserException if author join date cannot be parsed
      */
     public static String parsePostAuthorJoinDate(String html) throws ParserException {
         final Document document = Jsoup.parse(html);
@@ -216,7 +216,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the full page html
      * @return ArrayList of {@link Post} objects
-     * @throws ParserException
+     * @throws ParserException if posts cannot be parsed
      */
     public static ArrayList<Post> parsePosts(String html) throws ParserException {
        try {
@@ -236,7 +236,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the full page html
      * @return the integer post count
-     * @throws {@link ParserException}
+     * @throws ParserException if total thread posts cannot be parsed
      */
     public static int parseTotalThreadPosts(String html) throws ParserException {
         try {
@@ -253,7 +253,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the full page html
      * @return instance of jsoup {@link Elements}
-     * @throws {@link ParserException}
+     * @throws ParserException if post elements cannot be parsed
      */
     public static Elements parsePostElements(String html) throws ParserException {
         try {
@@ -269,7 +269,7 @@ public class PostsPageParser extends BaseParser {
      *
      * @param html the full page html
      * @return an instance of {@link PostsPage}
-     * @throws ParserException
+     * @throws ParserException if page cannot be parsed
      */
     public static PostsPage parse(String html) throws ParserException {
         int threadId = parseThreadId(html);

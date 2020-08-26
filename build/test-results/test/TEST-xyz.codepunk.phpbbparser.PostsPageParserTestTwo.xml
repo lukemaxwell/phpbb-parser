@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" tests="13" skipped="0" failures="0" errors="0" timestamp="2020-08-26T15:08:11" hostname="megatron" time="0.397">
+  <properties/>
+  <testcase name="testParsePosts" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.267"/>
+  <testcase name="testParseThreadId" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.016"/>
+  <testcase name="testParsePostAuthorJoinDate" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.005"/>
+  <testcase name="testParsePostElements" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.016"/>
+  <testcase name="testParse" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.055"/>
+  <testcase name="testParsePost" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.009"/>
+  <testcase name="testParsePostAuthorPostCount" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.002"/>
+  <testcase name="testParseTotalThreadPosts" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.006"/>
+  <testcase name="testParsePostAuthorUsername" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.002"/>
+  <testcase name="testParsePostContent" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.003"/>
+  <testcase name="testParsePostAuthor" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.005"/>
+  <testcase name="testParsePostAuthorId" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.003"/>
+  <testcase name="testParsePostDate" classname="xyz.codepunk.phpbbparser.PostsPageParserTestTwo" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
