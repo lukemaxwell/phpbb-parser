@@ -4,7 +4,7 @@
 
 A Java parser for PHPBB-based websites.
 
-The `PostsPageParser` can be used to parse a page of posts. It will automatically extract the posts, along with the thread ID and total post count for the thread:
+The `PostsPageParser` can be used to parse a page of posts. It will automatically extract the posts, along with the thread ID and total post count for the thread.
 
 ## Usage
 Import the `PostsPageParser`  and use the `parse()` method on a string containing 
