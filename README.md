@@ -1,4 +1,7 @@
 # PHPBB Parser
+[![Build Status](https://travis-ci.org/lukemaxwell/phpbb-parser.png?branch=master)](https://travis-ci.org/lukemaxwell/phpbbb-parser)
+[![codecov](https://codecov.io/gh/lukemaxwell/phpbb-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/lukemaxwell/phpbb-parser)
+
 A Java parser for PHPBB-based websites.
 
 The `PostsPageParser` can be used to parse a page of posts. It will automatically extract the posts, along with the thread ID, total thread post count:
@@ -60,4 +63,3 @@ The `PostsPageParser` has been tested against the following URLs:
 
  * https://forum.openoffice.org/en/forum/viewtopic.php?f=5&t=102832
 
- 
