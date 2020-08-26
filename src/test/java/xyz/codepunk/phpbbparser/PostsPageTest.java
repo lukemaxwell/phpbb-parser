@@ -1,7 +1,10 @@
-package xyz.codepunk;
+package xyz.codepunk.phpbbparser;
 
 import junit.framework.TestCase;
 import org.junit.Test;
+import xyz.codepunk.phpbbparser.models.Author;
+import xyz.codepunk.phpbbparser.models.Post;
+import xyz.codepunk.phpbbparser.models.PostsPage;
 
 import java.util.ArrayList;
 

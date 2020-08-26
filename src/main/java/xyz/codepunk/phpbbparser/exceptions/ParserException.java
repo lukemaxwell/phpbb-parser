@@ -1,4 +1,4 @@
-package xyz.codepunk.exceptions;
+package xyz.codepunk.phpbbparser.exceptions;
 
 
 public class ParserException extends Exception {

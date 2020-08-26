@@ -1,4 +1,4 @@
-package xyz.codepunk;
+package xyz.codepunk.phpbbparser.common;
 
 import java.util.HashMap;
 

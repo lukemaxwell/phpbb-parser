@@ -1,9 +1,8 @@
-package xyz.codepunk;
+package xyz.codepunk.phpbbparser;
 
 import junit.framework.TestCase;
 import org.junit.Test;
-
-import java.util.Date;
+import xyz.codepunk.phpbbparser.models.Author;
 
 public class AuthorTest extends TestCase {
 

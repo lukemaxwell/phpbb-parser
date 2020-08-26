@@ -1,18 +1,23 @@
-package xyz.codepunk;
+package xyz.codepunk.phpbbparser;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import xyz.codepunk.exceptions.ParserException;
+import xyz.codepunk.phpbbparser.common.BaseParser;
+import xyz.codepunk.phpbbparser.exceptions.ParserException;
+import xyz.codepunk.phpbbparser.models.Author;
+import xyz.codepunk.phpbbparser.models.Post;
+import xyz.codepunk.phpbbparser.models.PostsPage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public class PostsPageParser extends BaseParser {
-    final static ArrayList<String> authorXpaths = new ArrayList<>(Arrays.asList("span.username-coloured", "a.username-coloured", "a.username"));
-
+    final static ArrayList<String> authorXpaths = new ArrayList<>(Arrays.asList("span.username-coloured", "a.username-coloured", "a.username", "p a[href*=\"memberlist\"]"));
+    final static ArrayList<String> threadIdXpaths = new ArrayList<>(Arrays.asList("h2.topic-title > a", "div.topic-actions > div > div > a"));
+    final static ArrayList<String> authorIdXpaths = new ArrayList<>(Arrays.asList("dd.profile-posts > a", "p a[href*=\"memberlist\"]"));
     /**
      * Parse the thread ID.
      *
@@ -22,13 +27,16 @@ public class PostsPageParser extends BaseParser {
      */
     public static int parseThreadId(String html) throws ParserException {
         final Document document = Jsoup.parse(html);
-        try {
-            final Element topicLink = document.selectFirst("h2.topic-title > a");
-            final String urlString = topicLink.attr("href");
-            return Integer.parseInt(parseUrlParam(urlString, "t"));
-        } catch (Exception e) {
-            throw new ParserException("Could not parse thread ID");
+        for(String xpath: threadIdXpaths) {
+            try {
+                final Element topicLink = document.selectFirst(xpath);
+                final String urlString = topicLink.attr("href");
+                return Integer.parseInt(parseUrlParam(urlString, "t"));
+            } catch(Exception e) {
+                // Do nothing, throw exception after loop
+            }
         }
+        throw new ParserException("Could not parse thread ID");
     }
 
     /**
@@ -113,15 +121,17 @@ public class PostsPageParser extends BaseParser {
      * @return the integer post count
      * @throws {@link ParserException}
      */
+
     public static int parsePostAuthorPostCount(String html) throws ParserException {
-        try {
-            final Document document = Jsoup.parse(html);
-            final Element element = document.selectFirst("dd.profile-posts");
-            final String postCountStr = element.text().replace("Posts:", "").strip();
-            return Integer.parseInt(postCountStr);
-        } catch(Exception e) {
-            throw new ParserException("Could not parse author post count");
+        final Document document = Jsoup.parse(html);
+        final Elements elements = document.select("dl.postprofile > dd");
+        for(Element element: elements) {
+            final String text = element.text();
+            if(text.contains("Posts")) {
+                return Integer.parseInt(element.text().replace("Posts:", "").strip());
+            }
         }
+        throw new ParserException("Could not parse author posst count");
     }
 
     /**
@@ -145,6 +155,19 @@ public class PostsPageParser extends BaseParser {
         throw new ParserException("Could not parse author username");
     }
 
+    public static int parseAuthorIdFromUrl(String url) throws ParserException {
+        String authorId;
+        if(url.contains("memberlist")) {
+            authorId = parseUrlParam(url, "u");
+        } else {
+            authorId = parseUrlParam(url, "author_id");
+        }
+       if(authorId == null) {
+           throw new ParserException("Could not parse author ID from url");
+       }
+       return Integer.parseInt(authorId);
+    }
+
     /**
      * Parse post author ID.
      *
@@ -153,15 +176,20 @@ public class PostsPageParser extends BaseParser {
      * @throws {@link ParserException}
      */
     public static int parsePostAuthorId(String html) throws ParserException {
-        try {
-            final Document document = Jsoup.parse(html);
-            final Element linkElement = document.selectFirst("dd.profile-posts > a");
-            final String href = linkElement.attr("href");
-            return Integer.parseInt(parseUrlParam(href, "author_id"));
-        } catch(Exception e) {
-            throw new ParserException("Could not parse author ID");
+        final Document document = Jsoup.parse(html);
+        for(String xpath: authorIdXpaths) {
+            try {
+                final Element element = document.selectFirst(xpath);
+                final Element linkElement = document.selectFirst(xpath);
+                final String href = linkElement.attr("href");
+                return parseAuthorIdFromUrl(href);
+            } catch(Exception e) {
+                // Do nothing, throw exception after loop
+            }
         }
+        throw new ParserException("Could not parse author ID");
     }
+
 
     /**
      * Parse post author join date.
@@ -171,14 +199,17 @@ public class PostsPageParser extends BaseParser {
      * @throws {@link ParserException}
      */
     public static String parsePostAuthorJoinDate(String html) throws ParserException {
-        try {
-            final Document document = Jsoup.parse(html);
-            final Element element = document.selectFirst("dd.profile-joined");
-            return element.text().replace("Joined:", "").strip();
-        } catch(Exception e) {
-            throw new ParserException("Could not parse author join date");
+        final Document document = Jsoup.parse(html);
+        final Elements elements = document.select("dl.postprofile > dd");
+        for(Element element: elements) {
+            final String text = element.text();
+            if(text.contains("Joined")) {
+                return element.text().replace("Joined:", "").strip();
+            }
         }
+        throw new ParserException("Could not parse author join date");
     }
+
 
     /**
      * Parse posts.

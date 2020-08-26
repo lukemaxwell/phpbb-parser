@@ -1,7 +1,8 @@
-package xyz.codepunk;
+package xyz.codepunk.phpbbparser;
 
 import junit.framework.TestCase;
 import org.junit.Test;
+import xyz.codepunk.phpbbparser.PostsPageParser;
 
 import java.util.HashMap;
 
