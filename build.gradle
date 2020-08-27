@@ -21,7 +21,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes "Main-Class": "xyz.codepunk.PostsPageParser"
+        attributes "Main-Class": "xyz.codepunk.phpbbparser.PostsPageParser"
     }
 
     from {
@@ -30,7 +30,7 @@ jar {
 }
 
 application {
-    mainClassName = 'xyz.codepunk.PostsPageParser'
+    mainClassName = 'xyz.codepunk.phpbbparser.PostsPageParser'
 }
 
 jacocoTestReport {
