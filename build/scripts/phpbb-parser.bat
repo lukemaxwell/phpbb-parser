@@ -82,10 +82,10 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\phpbb-parser-1.0-SNAPSHOT.jar;%APP_HOME%\lib\jsoup-1.13.1.jar;%APP_HOME%\lib\gson-2.8.6.jar
+set CLASSPATH=%APP_HOME%\lib\phpbb-parser-1.0-SNAPSHOT.jar;%APP_HOME%\lib\jsoup-1.13.1.jar;%APP_HOME%\lib\junit-jupiter-5.4.2.jar;%APP_HOME%\lib\gson-2.8.6.jar;%APP_HOME%\lib\junit-jupiter-params-5.4.2.jar;%APP_HOME%\lib\junit-jupiter-engine-5.4.2.jar;%APP_HOME%\lib\junit-jupiter-api-5.4.2.jar;%APP_HOME%\lib\junit-platform-engine-1.4.2.jar;%APP_HOME%\lib\junit-platform-commons-1.4.2.jar;%APP_HOME%\lib\apiguardian-api-1.0.0.jar;%APP_HOME%\lib\opentest4j-1.1.1.jar
 
 @rem Execute phpbb-parser
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %PHPBB_PARSER_OPTS%  -classpath "%CLASSPATH%" xyz.codepunk.PostsPageParser %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %PHPBB_PARSER_OPTS%  -classpath "%CLASSPATH%" xyz.codepunk.phpbbparser.PostsPageParser %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell

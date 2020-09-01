@@ -1,0 +1,26 @@
+{
+  "threadId": 154691,
+  "totalThreadPosts": 2,
+  "posts": [
+    {
+      "author": {
+        "id": 205285,
+        "joined":  "16 Jun 2020 00:27",
+        "username": "callmejoe",
+        "postCount": 5
+      },
+      "content": "i have a strange issue with getting the status.xml file from the vlc http server. I am using this curl command Code: Select allcurl -s -u :password http://127.0.0.1:8080/requests/status.xml -o /tmp/status.xml it works fine from command line (bash shell). but if i put the curl command in a script and run the script it won't work. debug info shows that it can't connect to 127.0.0.1. strange thing is i figured out it will work from a script if the /tmp/status.xml file already exists. i've tried several variations/options of the curl command and tried using wget too, still same behavior. i'm not sure if this is an OS, bash, curl or vlc issue. using vlc 3.0.11.1-2 and archlinux 5.8.3",
+      "date": "24 Aug 2020 04:27"
+    },
+    {
+      "author": {
+        "id": 1687,
+        "joined":  "07 Jun 2004 16:01",
+        "username": "Rémi Denis-Courmont",
+        "postCount": 13143
+      },
+      "content": "This is really not a good venue for shell script debug help.",
+      "date": "24 Aug 2020 10:37"
+    }
+  ]
+}

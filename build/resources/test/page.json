@@ -1,0 +1,16 @@
+{
+  "threadId": 1,
+  "totalThreadPosts": 1,
+  "posts": [
+    {
+      "author": {
+        "id": 1,
+        "joined":  "",
+        "username": "",
+        "postCount": 1
+      },
+      "content": "",
+      "date": ""
+    }
+  ]
+}

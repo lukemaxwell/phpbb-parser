@@ -1,105 +1,81 @@
 package xyz.codepunk.phpbbparser;
 
 import junit.framework.TestCase;
-import org.junit.Before;
-import org.junit.Test;
-import xyz.codepunk.phpbbparser.models.Author;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.DynamicTest.dynamicTest;
+
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
 import xyz.codepunk.phpbbparser.models.Post;
 import xyz.codepunk.phpbbparser.models.PostsPage;
-import xyz.codepunk.phpbbparser.PostsPageParser;
 import xyz.codepunk.phpbbparser.exceptions.ParserException;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Collection;
 
-import static org.junit.Assert.assertEquals;
 
 public class PostsPageParserTest extends TestCase {
-    private String pageHtml;
-    private String postHtml;
+    private int dynamicTestCount = 3;
 
-    @Before
-    public void setUp() throws Exception {
-        super.setUp();
+    /**
+     * Return test resource file as string
+     *
+     * @param name name of file
+     * @return String
+     * @throws IOException if file does not exist
+     */
+    public String getResourceAsString(String name) throws IOException {
         final ClassLoader classLoader = getClass().getClassLoader();
-        final File pageHtmlFile = new File(classLoader.getResource("page.html").getFile());
-        final File postHtmlFile = new File(classLoader.getResource("post.html").getFile());
-        this.pageHtml = Files.readString(pageHtmlFile.toPath());
-        this.postHtml = Files.readString(postHtmlFile.toPath());
+        final File resourceFile = new File(classLoader.getResource(name).getFile());
+        return Files.readString(resourceFile.toPath());
     }
 
-    @Test
-    public void testParseThreadId() throws ParserException {
-        assertEquals(154691, PostsPageParser.parseThreadId(pageHtml));
-    }
+    /**
+     * Dynamically generate tests for all html test resources.
+     *
+     * Creates tests for resources in range 1 < dynamicTestCount
+     *
+     * @return Collection of dynamic tests
+     * @throws IOException if file for iteration index cannot be found
+     * @throws ParserException when required parsing functions fail
+     */
+    @TestFactory
+    Collection<DynamicTest> testPostsPageParser() throws IOException, ParserException {
+        final Collection<DynamicTest> tests = new ArrayList<>();
+        for(int i=1; i < dynamicTestCount+1; i++) {
+            final String pageHtml = getResourceAsString(String.format("page-%d.html", i));
+            final PostsPage postsPage = PostsPage.fromJson(getResourceAsString(String.format("page-%d.json", i)));
+            // Create tests...
+            // ...
 
-    @Test
-    public void testParsePost() throws ParserException {
-        final Post post = PostsPageParser.parsePost(postHtml);
-        assertEquals("Rémi Denis-Courmont", post.author.username);
-        assertEquals(1687, post.author.id);
-        assertEquals("07 Jun 2004 16:01", post.author.joined);
-        assertEquals(13143, post.author.postCount);
-        assertEquals("This is really not a good venue for shell script debug help.", post.content);
-        assertEquals("24 Aug 2020 10:37", post.date);
-    }
-
-    public void testParsePostAuthor() throws ParserException {
-        final Author author = PostsPageParser.parsePostAuthor(postHtml);
-        assertEquals("Rémi Denis-Courmont", author.username);
-        assertEquals(1687, author.id);
-        assertEquals("07 Jun 2004 16:01", author.joined);
-    }
-
-    @Test
-    public void testParsePostContent() throws ParserException {
-        assertEquals("This is really not a good venue for shell script debug help.", PostsPageParser.parsePostContent(postHtml));
-    }
-
-    @Test
-    public void testParsePostDate() throws ParserException {
-        assertEquals("24 Aug 2020 10:37", PostsPageParser.parsePostDate(postHtml));
-    }
-
-    @Test
-    public void testParsePostAuthorPostCount() throws ParserException {
-        assertEquals(13143, PostsPageParser.parsePostAuthorPostCount(postHtml));
-    }
-
-    @Test
-    public void testParsePostAuthorUsername() throws ParserException {
-        assertEquals("Rémi Denis-Courmont", PostsPageParser.parsePostAuthorUsername(postHtml));
-    }
-
-    @Test
-    public void testParsePostAuthorId() throws ParserException {
-        assertEquals(1687, PostsPageParser.parsePostAuthorId(postHtml));
-    }
-
-    @Test
-    public void testParsePostAuthorJoinDate() throws ParserException {
-        assertEquals("07 Jun 2004 16:01", PostsPageParser.parsePostAuthorJoinDate(postHtml));
-    }
-
-    public void testParsePosts() throws ParserException {
-        final ArrayList<Post> posts = PostsPageParser.parsePosts(pageHtml);
-        assertEquals(2, posts.size());
-    }
-
-    public void testParseTotalThreadPosts() throws ParserException {
-        assertEquals(2, PostsPageParser.parseTotalThreadPosts(pageHtml));
-    }
-
-    @Test
-    public void testParsePostElements() throws ParserException {
-        assertEquals(2, PostsPageParser.parsePostElements(pageHtml).size());
-    }
-
-    public void testParse() throws ParserException {
-        PostsPage page = PostsPageParser.parse(pageHtml);
-        assertEquals(2, page.posts.size());
-        assertEquals(154691, page.threadId);
-        assertEquals(2, page.totalThreadPosts);
+            // Parse threadId
+            tests.add(dynamicTest(String.format("parseThreadId-%d", i), () -> assertEquals(postsPage.threadId, PostsPageParser.parseThreadId(pageHtml))));
+            // Parse total thread post count
+            tests.add(dynamicTest(String.format("parseTotalThreadPosts-%d", i), () -> assertEquals(postsPage.totalThreadPosts, PostsPageParser.parseTotalThreadPosts(pageHtml))));
+            // Posts length
+            tests.add(dynamicTest(String.format("postsLength-%d", i), () -> assertEquals(postsPage.posts.size(), PostsPageParser.parse(pageHtml).posts.size())));
+            // Post parsing
+            ArrayList<Post> parsedPosts = PostsPageParser.parsePosts(pageHtml);
+            for(int j=0; j<parsedPosts.size(); j++) {
+                Post expectedPost = postsPage.posts.get(j);
+                Post parsedPost = parsedPosts.get(j);
+                // Post date
+                tests.add(dynamicTest(String.format("parsePostDate-%d", i), () -> assertEquals(expectedPost.date, parsedPost.date)));
+                // Post content
+                tests.add(dynamicTest(String.format("parsePostContent-%d", i), () -> assertEquals(expectedPost.content, parsedPost.content)));
+                // Post Author username
+                tests.add(dynamicTest(String.format("parsePostAuthorUsername-%d", i), () -> assertEquals(expectedPost.author.username, parsedPost.author.username)));
+                // Post Author ID
+                tests.add(dynamicTest(String.format("parsePostAuthorUsername-%d", i), () -> assertEquals(expectedPost.author.id, parsedPost.author.id)));
+                // Post Author join date
+                tests.add(dynamicTest(String.format("parsePostAuthorJoined-%d", i), () -> assertEquals(expectedPost.author.joined, parsedPost.author.joined)));
+                // Post Author post count
+                tests.add(dynamicTest(String.format("parsePostAuthorPostCount-%d", i), () -> assertEquals(expectedPost.author.postCount, parsedPost.author.postCount)));
+            }
+       }
+        return tests;
     }
 }

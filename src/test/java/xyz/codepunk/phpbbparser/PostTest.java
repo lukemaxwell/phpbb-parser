@@ -5,12 +5,14 @@ import org.junit.Test;
 import xyz.codepunk.phpbbparser.models.Author;
 import xyz.codepunk.phpbbparser.models.Post;
 
+import java.util.Optional;
+
 public class PostTest extends TestCase {
     @Test
     public void testPost() {
         final String joined = "Tue Oct 29, 2019 07:09";
         final String postDate = "Wed Dec 30, 2019 07:09";
-        final Author author = new Author(123, "Mr T", 25, joined);
+        final Author author = new Author(123, "Mr T", Optional.of(25), Optional.of(joined));
         final String content = "Hello world";
         final Post post = new Post(author, postDate, content);
         assertEquals(post.date, postDate);

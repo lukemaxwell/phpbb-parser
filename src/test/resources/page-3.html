@@ -1,0 +1,1381 @@
+<html dir="ltr" lang="it"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Aggiornamento del forum • Forum Ubuntu-it</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Notiziario - Forum Ubuntu-it" href="/app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Notiziario - Tutte le sezioni" href="/app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Notiziario - Nuove discussioni" href="/app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Notiziario - Sezione - Novità e aggiornamenti" href="/app.php/feed/forum/17">	<link rel="alternate" type="application/atom+xml" title="Notiziario - Discussione - Aggiornamento del forum" href="/app.php/feed/topic/637551">	
+	<link rel="canonical" href="https://forum.ubuntu-it.org/viewtopic.php?t=637551">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=90" rel="stylesheet">
+<link href="./styles/relight/theme/stylesheet.css?assets_version=90" rel="stylesheet">
+
+
+
+	<link href="./assets/cookieconsent/cookieconsent.min.css?assets_version=90" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/relight/theme/tweaks.css?assets_version=90" rel="stylesheet">
+<![endif]-->
+
+<style type="text/css">
+    .mention {
+        color: #772953;
+    }
+</style>
+	
+<link href="./ext/alfredoramos/imgur/styles/all/theme/css/common.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/alfredoramos/imgur/styles/prosilver/theme/css/imgur.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/alfredoramos/simplespoiler/styles/all/theme/css/common.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/alfredoramos/simplespoiler/styles/prosilver/theme/css/style.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/alfredoramos/simplespoiler/styles/prosilver/theme/css/colors.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/paul999/mention/styles/all/theme/mention.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/paybas/quicklogin/styles/all/theme/quick_login.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/rmcgirr83/contactadmin/styles/prosilver/theme/imageset.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/vse/scrollpage/styles/all/theme/scrollpage.css?assets_version=90" rel="stylesheet" media="screen">
+<link href="./ext/vse/lightbox/styles/all/template/lightbox/css/lightbox.min.css?assets_version=90" rel="stylesheet" media="screen">
+
+
+
+<script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    __insertDappDetected()
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script></head>
+<body id="phpbb" class="notouch section-viewtopic ltr hasjs">
+<div id="fixed-header">
+        <!-- Header -->
+        <div id="header" class="shadowed curved-bottom">
+          <div class="container">
+
+            <ul class="links ulnav">
+                <li><a href="./index.php" accesskey="h">Indice</a></li>
+											<li><a href="./viewforum.php?f=100">Notizie e informazioni utili</a></li>
+															<li><a href="./viewforum.php?f=17">Novità e aggiornamenti</a></li>
+							            </ul>
+            <div id="logo">  
+              <div id="ubuntu-it-sites">
+                  <a href="https://www.ubuntu-it.org">web</a>
+                  <a href="https://wiki.ubuntu-it.org">wiki</a>
+                  <a class="active" href="https://forum.ubuntu-it.org">forum</a>
+                  <a href="https://chiedi.ubuntu-it.org/">chiedi</a>
+                  <a href="https://chat.ubuntu-it.org">chat</a>
+                  <a href="https://cerca.ubuntu-it.org">cerca</a>
+                  <a href="https://planet.ubuntu-it.org">planet</a>
+              </div>
+               <span class="title">ubuntu-it</span>
+               <span class="description">comunità italiana</span>
+            </div>                     
+    						<div id="searchbox">
+			<div id="search-box" class="search-box search-header" role="search">
+				<form action="./search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Ricerca per termini" class="inputbox search tiny" size="20" value="" placeholder="Cerca nel forum…">
+					<button class="button button-search" type="submit" title="Cerca">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Cerca</span>
+					</button>
+					<a href="./search.php" class="button button-search-end" title="Ricerca avanzata">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Ricerca avanzata</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+			</div>
+			        
+
+		     
+          </div>
+        </div>
+        <!-- Sub Header -->
+          <div id="subheader">
+            <div class="container">
+              <div class="container-inside">
+				 <ul class="links secondary-links leftside">
+				 <li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger dropdown-toggle">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Collegamenti veloci</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="./search.php?search_id=unanswered" role="menuitem">
+									<i class="icon fa-comments fa-fw icon-gray" aria-hidden="true"></i><span>Discussioni senza risposta</span>
+								</a>
+							</li>
+							<li>
+								<a href="./search.php?search_id=active_topics" role="menuitem">
+									<i class="icon fa-comments fa-fw icon-red" aria-hidden="true"></i><span>Discussioni attive</span>
+								</a>
+							</li>
+					
+																		<li>
+								<a href="./memberlist.php" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Iscritti</span>
+								</a>
+							</li>
+																			<li>
+								<a href="./memberlist.php?mode=team" role="menuitem">
+									<i class="icon fa-user-circle fa-fw" aria-hidden="true"></i><span>Moderazione</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+				</li>
+		<li><a href="/app.php/help/faq" title="Domande frequenti sull’uso del forum"><i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>Aiuto</span></a></li>
+<!--        <li><a href="./rules.php" title="Regolamento del forum"><i class="icon fa-book fa-fw" aria-hidden="true"></i><span>Regolamento</a></li> -->
+	<li data-last-responsive="true">
+		<a href="/app.php/rules" rel="help" title="Vai al regolamento del forum" role="menuitem">
+			<i class="icon fa-book fa-fw" aria-hidden="true"></i><span>Regolamento</span>
+		</a>
+	</li>
+				                  </ul>
+                  <ul class="links secondary-links rightside">
+		 					<li><a href="./ucp.php?mode=register"><i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Iscriviti</span></a></li>  
+		<li><a href="./ucp.php?mode=login" title="Accedi"><i class="icon fa-sign-in fa-fw" aria-hidden="true"></i><span>Accedi</span></a></li>				    
+				                  </ul>
+              </div>
+            </div>
+          </div>
+            </div>
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="./index.php" title="Indice"><span class="site_logo"></span></a>
+				<h1>Forum Ubuntu-it</h1>
+				<p>Il forum della comunità italiana di Ubuntu.</p>
+				<p class="skiplink"><a href="#start_here">Passa al contenuto</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="./search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Ricerca per termini" class="inputbox search tiny" size="20" value="" placeholder="Cerca nel forum…">
+					<button class="button button-search" type="submit" title="Cerca">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Cerca</span>
+					</button>
+					<a href="./search.php" class="button button-search-end" title="Ricerca avanzata">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Ricerca avanzata</span>
+					</a>
+					
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger dropdown-toggle">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Collegamenti veloci</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="./search.php?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Discussioni senza risposta</span>
+								</a>
+							</li>
+							<li>
+								<a href="./search.php?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Discussioni attive</span>
+								</a>
+							</li>
+							<!--<li class="separator"></li> TOLTO IL CERCA CHE é RIDONDANTE
+							<li>
+								<a href="./search.php" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Cerca</span>
+								</a>
+							</li> -->
+					
+											<li class="separator"></li>
+													<li>
+								<a href="./memberlist.php" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Iscritti</span>
+								</a>
+							</li>
+																			<li>
+								<a href="./memberlist.php?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>Moderazione</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq" rel="help" title="Domande frequenti sull’uso del forum" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>Aiuto</span>
+			</a>
+		</li>
+			<li data-last-responsive="true">
+		<a href="/app.php/rules" rel="help" title="Vai al regolamento del forum" role="menuitem">
+			<i class="icon fa-book fa-fw" aria-hidden="true"></i><span>Regolamento</span>
+		</a>
+	</li>
+	<li class="" data-last-responsive="true">
+		<a href="/app.php/contactadmin" role="menuitem">
+			<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contattaci</span>
+		</a>
+	</li>
+				
+			<li class="rightside" data-skip-responsive="true">
+			<a href="./ucp.php?mode=login" title="Accedi" accesskey="x" role="menuitem">
+				<i class="icon fa-sign-in fa-fw" aria-hidden="true"></i><span>Accedi</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Iscriviti</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+								<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList" style="max-width: 240px;">
+										<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a href="./index.php" itemtype="https://schema.org/Thing" itemprop="item" accesskey="h" data-navbar-reference="index" title="Indice"><i class="icon fa-home fa-fw"></i><span itemprop="name">Indice</span></a><meta itemprop="position" content="1"></span>
+
+											<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="100"><a href="./viewforum.php?f=100" itemtype="https://schema.org/Thing" itemprop="item" title="Notizie e informazioni utili"><span itemprop="name">Notizie e informazioni utili</span></a><meta itemprop="position" content="2"></span>
+															<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="17"><a href="./viewforum.php?f=17" itemtype="https://schema.org/Thing" itemprop="item" title="Novità e aggiornamenti"><span itemprop="name">Novità e aggiornamenti</span></a><meta itemprop="position" content="3"></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="./search.php" title="Visualizzare le opzioni di ricerca avanzata" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Cerca</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+			
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=17&amp;t=637551">Aggiornamento del forum</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Comunicazioni di gestione del forum o della comunità italiana di Ubuntu ai visitatori e agli iscritti. Leggere eventuali nuovi messaggi.<br></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=17&amp;t=637551" class="button" title="Rispondi al messaggio">
+							<span>Scrivi risposta</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Strumenti della discussione" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=17&amp;t=637551&amp;view=print" title="Stampa pagina" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Stampa pagina</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="./search.php">
+			<fieldset>
+				<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="Cerca nella discussione…">
+				<button class="button button-search" type="submit" title="Cerca">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Cerca</span>
+				</button>
+				<a href="./search.php" class="button button-search-end" title="Ricerca avanzata">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Ricerca avanzata</span>
+				</a>
+				<input type="hidden" name="t" value="637551">
+<input type="hidden" name="sf" value="msgonly">
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			6 messaggi
+							• Pagina <strong>1</strong> di <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p5172347" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile5172347">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=575" class="avatar"><img src="//secure.gravatar.com/avatar/20fcf043368e84588b0039c3c598644d?s=120" width="120" height="120" alt="Avatar utente"></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a>							</dt>
+
+						<dd class="profile-rank">Amministratore<br><img src="./images/ranks/stelle-amministratori.png" alt="Amministratore" title="Amministratore"></dd>			
+		<dd class="profile-posts"><strong>Messaggi:</strong> <a href="./search.php?author_id=575&amp;sr=posts">18134</a></dd>		<dd class="profile-joined"><strong>Iscrizione:</strong> lunedì 25 aprile 2005, 15:52</dd>		
+		
+											<dd class="profile-custom-field profile-desktop"><strong>Desktop:</strong> GNOME Shell  / Xfce</dd>
+												<dd class="profile-custom-field profile-sesso"><strong>Sesso:</strong> Maschile</dd>
+																	<dd class="profile-custom-field profile-phpbb_location"><strong>Località:</strong> Potenza</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contatti:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger dropdown-toggle" title="Contatta Janvitus">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contatta Janvitus</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://wiki.ubuntu-it.org/GianvitoCavasoli" title="Sito web" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Sito web</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content5172347">
+
+						<h3 class="first"><a href="#p5172347">Aggiornamento del forum</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=17&amp;p=5172347" title="Rispondi citando" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Cita</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=5172347#p5172347" title="Messaggio">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Messaggio</span>
+					</a>
+								<span class="responsive-hide">da <strong><a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a></strong> » </span>martedì 21 gennaio 2020, 14:24
+			</p>
+			
+			
+			
+			<div class="content">Questo aggiornamento ci ha fatto tribolare un bel po', il database non si voleva aggiornare e l'operazione ha preso più del giorno previsto... Comunque, dopo anni di rinvii e lavoro finalmente siamo riusciti ad aggiornare il forum all'ultima versione disponibile del ramo 3.2 di phpBB, esattamente la 3.2.9. Per conoscere le nuove funzionalità si consiglia agli utenti di consultare il proprio pannello di controllo utente, ma in generale alcune nuove funzionalità sono visibili usando il forum.<br>
+<br>
+Come ogni grosso aggiornamento, qualcosa potrebbe esserci sfuggita, segnalate nell'apposita discussione nella sezione del Gruppo Forum, qui: <a href="https://forum.ubuntu-it.org/viewtopic.php?f=32&amp;t=518799&amp;start=1720" class="postlink">viewtopic.php?f=32&amp;t=518799&amp;start=1720</a>. La traduzione del forum è stata ritradotta e corretta da me, se notate errori di grammatica e ortografia, segnalate sempre nella sopracitata discussione.<br>
+<br>
+Per il resto, devo ringraziare soprattutto <strong class="text-strong"><a href="https://forum.ubuntu-it.org:8080/memberlist.php?mode=viewprofile&amp;u=168081" class="postlink">Barrnet</a></strong>, senza il suo aiuto l'aggiornamento non ci sarebbe stato, è lui che si è occupato della conversione del tema dalla vecchia versione del forum al nuovo. Poi c'è da ringraziare <strong class="text-strong"><a href="https://forum.ubuntu-it.org:8080/memberlist.php?mode=viewprofile&amp;u=95214" class="postlink">Ubunuovo</a></strong> che si è occupato di aggiornare le icone delle sezioni e delle discussioni, insomma, quelle rotonde e grandi, il resto sono FontAwesome (altra nuova funzionalità del forum). In ultimo, un piccolo ringraziamento anche a <strong class="text-strong"><a href="https://forum.ubuntu-it.org:8080/memberlist.php?mode=viewprofile&amp;u=134238" class="postlink">mapreri</a></strong> che mi ha supportato in alcune cose della parte tecnica esterna al forum.<br>
+<br>
+Un'ultima avviso: nei prossimi giorni ci potrebbero essere piccole manutenzioni del forum, è cosa normale, e segnalo anche che siamo già a conoscenza del problema con le citazioni precedenti a questo aggiornamento, e anche gli spoiler, vedremo di risolvere nelle prossime settimane. Non si trattano di problematiche che inficiano l'uso e la stabilità del forum, ma solo "l'estetica", esempi <a href="https://forum.ubuntu-it.org/viewtopic.php?f=13&amp;t=258932&amp;start=57960#p5172168" class="postlink">qui</a> e <a href="https://forum.ubuntu-it.org/viewtopic.php?f=13&amp;t=258932&amp;start=57960#p5172264" class="postlink">qui</a>. Sempre riguardo gli errori, i tipi di accesso alternativi saranno attivi al più presto (twitter, google, ecc.), non si potevano configurare con il forum disattivato.<br>
+Quindi, non segnalate queste errori nell'apposita discussione.<br>
+<br>
+Buon forum.</div>
+
+			
+			
+									
+									<div id="sig5172347" class="signature"><div style="text-align:center"><a href="https://janvitus.wordpress.com" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-wordpress fa-fw" aria-hidden="true"></i></a> • <a href="https://telegram.me/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-paper-plane fa-fw" aria-hidden="true"></i></a> • <a href="https://twitter.com/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-twitter fa-fw" aria-hidden="true"></i></a> • <a href="https://www.last.fm/it/user/Gianvito" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-lastfm fa-fw" aria-hidden="true"></i></a> • <a href="https://www.anobii.com/janvitus/profile" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-book fa-fw" aria-hidden="true"></i></a> • <a href="https://trakt.tv/users/janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-film fa-fw" aria-hidden="true"></i></a> • <a href="https://s95.photobucket.com/user/Janvitus/slideshow/Lian%20Li%20PC-Q03" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-desktop fa-fw" aria-hidden="true"></i></a>+Fedora 32 • <a href="https://icecat.biz/en-sg/p/samsung/np905s3g-k01it/ativ-notebooks-np905s3g-19202464.html" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-laptop fa-fw" aria-hidden="true"></i></a>+Xubuntu 20.04</div></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Ritorna su">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Ritorna su</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p5172702" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile5172702">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=575" class="avatar"><img src="//secure.gravatar.com/avatar/20fcf043368e84588b0039c3c598644d?s=120" width="120" height="120" alt="Avatar utente"></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a>							</dt>
+
+						<dd class="profile-rank">Amministratore<br><img src="./images/ranks/stelle-amministratori.png" alt="Amministratore" title="Amministratore"></dd>			
+		<dd class="profile-posts"><strong>Messaggi:</strong> <a href="./search.php?author_id=575&amp;sr=posts">18134</a></dd>		<dd class="profile-joined"><strong>Iscrizione:</strong> lunedì 25 aprile 2005, 15:52</dd>		
+		
+											<dd class="profile-custom-field profile-desktop"><strong>Desktop:</strong> GNOME Shell  / Xfce</dd>
+												<dd class="profile-custom-field profile-sesso"><strong>Sesso:</strong> Maschile</dd>
+																	<dd class="profile-custom-field profile-phpbb_location"><strong>Località:</strong> Potenza</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contatti:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger dropdown-toggle" title="Contatta Janvitus">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contatta Janvitus</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://wiki.ubuntu-it.org/GianvitoCavasoli" title="Sito web" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Sito web</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content5172702">
+
+						<h3><a href="#p5172702">Re: Aggiornamento del forum</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=17&amp;p=5172702" title="Rispondi citando" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Cita</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=5172702#p5172702" title="Messaggio">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Messaggio</span>
+					</a>
+								<span class="responsive-hide">da <strong><a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a></strong> » </span>giovedì 23 gennaio 2020, 19:20
+			</p>
+			
+			
+			
+			<div class="content">Avviso: sappiamo delle difficoltà quando si invia o si modifica un messaggio, il forum carica all'infinito e sembra che non invia il messaggio ma lo ha già fatto. Quindi <strong class="text-strong"><span style="color:#FF0000">NON fate clic decine di volte su Invia</span></strong> perché creerete solo doppioni.</div>
+
+			
+			
+									
+									<div id="sig5172702" class="signature"><div style="text-align:center"><a href="https://janvitus.wordpress.com" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-wordpress fa-fw" aria-hidden="true"></i></a> • <a href="https://telegram.me/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-paper-plane fa-fw" aria-hidden="true"></i></a> • <a href="https://twitter.com/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-twitter fa-fw" aria-hidden="true"></i></a> • <a href="https://www.last.fm/it/user/Gianvito" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-lastfm fa-fw" aria-hidden="true"></i></a> • <a href="https://www.anobii.com/janvitus/profile" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-book fa-fw" aria-hidden="true"></i></a> • <a href="https://trakt.tv/users/janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-film fa-fw" aria-hidden="true"></i></a> • <a href="https://s95.photobucket.com/user/Janvitus/slideshow/Lian%20Li%20PC-Q03" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-desktop fa-fw" aria-hidden="true"></i></a>+Fedora 32 • <a href="https://icecat.biz/en-sg/p/samsung/np905s3g-k01it/ativ-notebooks-np905s3g-19202464.html" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-laptop fa-fw" aria-hidden="true"></i></a>+Xubuntu 20.04</div></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Ritorna su">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Ritorna su</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p5173554" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile5173554">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=575" class="avatar"><img src="//secure.gravatar.com/avatar/20fcf043368e84588b0039c3c598644d?s=120" width="120" height="120" alt="Avatar utente"></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a>							</dt>
+
+						<dd class="profile-rank">Amministratore<br><img src="./images/ranks/stelle-amministratori.png" alt="Amministratore" title="Amministratore"></dd>			
+		<dd class="profile-posts"><strong>Messaggi:</strong> <a href="./search.php?author_id=575&amp;sr=posts">18134</a></dd>		<dd class="profile-joined"><strong>Iscrizione:</strong> lunedì 25 aprile 2005, 15:52</dd>		
+		
+											<dd class="profile-custom-field profile-desktop"><strong>Desktop:</strong> GNOME Shell  / Xfce</dd>
+												<dd class="profile-custom-field profile-sesso"><strong>Sesso:</strong> Maschile</dd>
+																	<dd class="profile-custom-field profile-phpbb_location"><strong>Località:</strong> Potenza</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contatti:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger dropdown-toggle" title="Contatta Janvitus">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contatta Janvitus</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://wiki.ubuntu-it.org/GianvitoCavasoli" title="Sito web" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Sito web</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content5173554">
+
+						<h3><a href="#p5173554">Re: Aggiornamento del forum</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=17&amp;p=5173554" title="Rispondi citando" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Cita</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=5173554#p5173554" title="Messaggio">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Messaggio</span>
+					</a>
+								<span class="responsive-hide">da <strong><a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a></strong> » </span>martedì 28 gennaio 2020, 12:16
+			</p>
+			
+			
+			
+			<div class="content">I metodi alternativi di accesso al forum, facebook, google e twitter, ora funzionano senza problemi. Potete abilitarli dal pannello di controllo utente &gt; profilo &gt; gestione associazioni account esterni. In futuro si cercherà di aggiungere anche Ubuntu Single Sign On (SSO).<br>
+<br>
+<br>
+Inoltre, funziona di nuovo il sistema di notiche e messaggi Jabber/XMPP, per chi ancora ne fa uso. L'account Jabber lo potete aggiungere nella scheda modifica profilo nel pcu, e poi abilitare le varie opzioni per le notifiche. Inoltre, è possibile mandare messaggi diretti dal forum. (icona contatto sotto l'avatar dell'utente o dalla pagina account)</div>
+
+			
+			
+									
+									<div id="sig5173554" class="signature"><div style="text-align:center"><a href="https://janvitus.wordpress.com" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-wordpress fa-fw" aria-hidden="true"></i></a> • <a href="https://telegram.me/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-paper-plane fa-fw" aria-hidden="true"></i></a> • <a href="https://twitter.com/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-twitter fa-fw" aria-hidden="true"></i></a> • <a href="https://www.last.fm/it/user/Gianvito" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-lastfm fa-fw" aria-hidden="true"></i></a> • <a href="https://www.anobii.com/janvitus/profile" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-book fa-fw" aria-hidden="true"></i></a> • <a href="https://trakt.tv/users/janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-film fa-fw" aria-hidden="true"></i></a> • <a href="https://s95.photobucket.com/user/Janvitus/slideshow/Lian%20Li%20PC-Q03" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-desktop fa-fw" aria-hidden="true"></i></a>+Fedora 32 • <a href="https://icecat.biz/en-sg/p/samsung/np905s3g-k01it/ativ-notebooks-np905s3g-19202464.html" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-laptop fa-fw" aria-hidden="true"></i></a>+Xubuntu 20.04</div></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Ritorna su">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Ritorna su</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p5178200" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile5178200">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=575" class="avatar"><img src="//secure.gravatar.com/avatar/20fcf043368e84588b0039c3c598644d?s=120" width="120" height="120" alt="Avatar utente"></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a>							</dt>
+
+						<dd class="profile-rank">Amministratore<br><img src="./images/ranks/stelle-amministratori.png" alt="Amministratore" title="Amministratore"></dd>			
+		<dd class="profile-posts"><strong>Messaggi:</strong> <a href="./search.php?author_id=575&amp;sr=posts">18134</a></dd>		<dd class="profile-joined"><strong>Iscrizione:</strong> lunedì 25 aprile 2005, 15:52</dd>		
+		
+											<dd class="profile-custom-field profile-desktop"><strong>Desktop:</strong> GNOME Shell  / Xfce</dd>
+												<dd class="profile-custom-field profile-sesso"><strong>Sesso:</strong> Maschile</dd>
+																	<dd class="profile-custom-field profile-phpbb_location"><strong>Località:</strong> Potenza</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contatti:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger dropdown-toggle" title="Contatta Janvitus">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contatta Janvitus</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://wiki.ubuntu-it.org/GianvitoCavasoli" title="Sito web" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Sito web</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content5178200">
+
+						<h3><a href="#p5178200">Re: Aggiornamento del forum</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=17&amp;p=5178200" title="Rispondi citando" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Cita</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=5178200#p5178200" title="Messaggio">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Messaggio</span>
+					</a>
+								<span class="responsive-hide">da <strong><a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a></strong> » </span>martedì 25 febbraio 2020, 12:59
+			</p>
+			
+			
+			
+			<div class="content">È stata aggiunta la possibilità di caricare le immagini su <a href="https://imgur.com/" class="postlink" target="_blank" rel="nofollow">Imgur</a>, per farlo basta andare nell'editor completo e selezionare la scheda in basso "Imgur" e fare clic sull'immagine verde:<br>
+<br>
+
+<div class="inline-attachment"><!-- ia0 -->Schermata da 2020-02-25 12-55-09.png<!-- ia0 --></div>
+
+<br>
+Si possono caricare più immagini facendo altri clic sull'immagine verde.<br>
+<br>
+<br>
+Nei prossimi giorni sarà aggiunto anche il bbcode fra gli altri disponibili.</div>
+
+			
+			
+						<div class="rules">Non si hanno i permessi necessari per visualizzare i file allegati in questo messaggio.</div>			
+									<div id="sig5178200" class="signature"><div style="text-align:center"><a href="https://janvitus.wordpress.com" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-wordpress fa-fw" aria-hidden="true"></i></a> • <a href="https://telegram.me/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-paper-plane fa-fw" aria-hidden="true"></i></a> • <a href="https://twitter.com/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-twitter fa-fw" aria-hidden="true"></i></a> • <a href="https://www.last.fm/it/user/Gianvito" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-lastfm fa-fw" aria-hidden="true"></i></a> • <a href="https://www.anobii.com/janvitus/profile" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-book fa-fw" aria-hidden="true"></i></a> • <a href="https://trakt.tv/users/janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-film fa-fw" aria-hidden="true"></i></a> • <a href="https://s95.photobucket.com/user/Janvitus/slideshow/Lian%20Li%20PC-Q03" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-desktop fa-fw" aria-hidden="true"></i></a>+Fedora 32 • <a href="https://icecat.biz/en-sg/p/samsung/np905s3g-k01it/ativ-notebooks-np905s3g-19202464.html" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-laptop fa-fw" aria-hidden="true"></i></a>+Xubuntu 20.04</div></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Ritorna su">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Ritorna su</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p5180430" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile5180430">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=575" class="avatar"><img src="//secure.gravatar.com/avatar/20fcf043368e84588b0039c3c598644d?s=120" width="120" height="120" alt="Avatar utente"></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a>							</dt>
+
+						<dd class="profile-rank">Amministratore<br><img src="./images/ranks/stelle-amministratori.png" alt="Amministratore" title="Amministratore"></dd>			
+		<dd class="profile-posts"><strong>Messaggi:</strong> <a href="./search.php?author_id=575&amp;sr=posts">18134</a></dd>		<dd class="profile-joined"><strong>Iscrizione:</strong> lunedì 25 aprile 2005, 15:52</dd>		
+		
+											<dd class="profile-custom-field profile-desktop"><strong>Desktop:</strong> GNOME Shell  / Xfce</dd>
+												<dd class="profile-custom-field profile-sesso"><strong>Sesso:</strong> Maschile</dd>
+																	<dd class="profile-custom-field profile-phpbb_location"><strong>Località:</strong> Potenza</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contatti:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger dropdown-toggle" title="Contatta Janvitus">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contatta Janvitus</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://wiki.ubuntu-it.org/GianvitoCavasoli" title="Sito web" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Sito web</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content5180430">
+
+						<h3><a href="#p5180430">Re: Aggiornamento del forum</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=17&amp;p=5180430" title="Rispondi citando" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Cita</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=5180430#p5180430" title="Messaggio">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Messaggio</span>
+					</a>
+								<span class="responsive-hide">da <strong><a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a></strong> » </span>mercoledì 11 marzo 2020, 1:32
+			</p>
+			
+			
+			
+			<div class="content">È stato attivato il sistema di menzioni anche per gli utenti. Le menzioni funzionano similarmente a quelle usate sulle reti sociali, tipo Twitter, Facebook, eccetera. Chi viene menzionato riceverà una notifica, sempre se è stata abilitata dal pannello di controllo utente &gt; preferenze forum &gt; opzioni notifiche.<br>
+<br>
+Per menzionare qualcuno, basta iniziare a scrivere il nome utente dopo la @ e alla terza lettera inserita il sistema vi proporrà un elenco con i nomi, basta selezionare quello interessato.<br>
+<br>
+<br>
+Esempio:
+<div class="inline-attachment"><!-- ia0 -->Schermata da 2020-03-10 21-12-46.png<!-- ia0 --></div>
+
+<br>
+Il nome apparirà in viola ubuntu: <span class="mention">@Janvitus</span><br>
+<br>
+<br>
+In alternativa, si può usare [ mention ]nome[ /mention ] (gli spazi sono da togliere). Poi si vedrà se aggiungerlo nell'elenco dei bbcode.</div>
+
+			
+			
+						<div class="rules">Non si hanno i permessi necessari per visualizzare i file allegati in questo messaggio.</div>			
+									<div id="sig5180430" class="signature"><div style="text-align:center"><a href="https://janvitus.wordpress.com" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-wordpress fa-fw" aria-hidden="true"></i></a> • <a href="https://telegram.me/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-paper-plane fa-fw" aria-hidden="true"></i></a> • <a href="https://twitter.com/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-twitter fa-fw" aria-hidden="true"></i></a> • <a href="https://www.last.fm/it/user/Gianvito" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-lastfm fa-fw" aria-hidden="true"></i></a> • <a href="https://www.anobii.com/janvitus/profile" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-book fa-fw" aria-hidden="true"></i></a> • <a href="https://trakt.tv/users/janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-film fa-fw" aria-hidden="true"></i></a> • <a href="https://s95.photobucket.com/user/Janvitus/slideshow/Lian%20Li%20PC-Q03" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-desktop fa-fw" aria-hidden="true"></i></a>+Fedora 32 • <a href="https://icecat.biz/en-sg/p/samsung/np905s3g-k01it/ativ-notebooks-np905s3g-19202464.html" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-laptop fa-fw" aria-hidden="true"></i></a>+Xubuntu 20.04</div></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Ritorna su">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Ritorna su</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p5217195" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile5217195">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=575" class="avatar"><img src="//secure.gravatar.com/avatar/20fcf043368e84588b0039c3c598644d?s=120" width="120" height="120" alt="Avatar utente"></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a>							</dt>
+
+						<dd class="profile-rank">Amministratore<br><img src="./images/ranks/stelle-amministratori.png" alt="Amministratore" title="Amministratore"></dd>			
+		<dd class="profile-posts"><strong>Messaggi:</strong> <a href="./search.php?author_id=575&amp;sr=posts">18134</a></dd>		<dd class="profile-joined"><strong>Iscrizione:</strong> lunedì 25 aprile 2005, 15:52</dd>		
+		
+											<dd class="profile-custom-field profile-desktop"><strong>Desktop:</strong> GNOME Shell  / Xfce</dd>
+												<dd class="profile-custom-field profile-sesso"><strong>Sesso:</strong> Maschile</dd>
+																	<dd class="profile-custom-field profile-phpbb_location"><strong>Località:</strong> Potenza</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contatti:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger dropdown-toggle" title="Contatta Janvitus">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contatta Janvitus</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://wiki.ubuntu-it.org/GianvitoCavasoli" title="Sito web" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Sito web</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content5217195">
+
+						<h3><a href="#p5217195">Re: Aggiornamento del forum</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=17&amp;p=5217195" title="Rispondi citando" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Cita</span>
+							</a>
+						</li>
+														<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=5217195#p5217195" title="Messaggio">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Messaggio</span>
+					</a>
+								<span class="responsive-hide">da <strong><a href="./memberlist.php?mode=viewprofile&amp;u=575" style="color: #AA0000;" class="username-coloured">Janvitus</a></strong> » </span>venerdì 21 agosto 2020, 16:50
+			</p>
+			
+			
+			
+			<div class="content">Il software alla base del forum, phpBB, è stato aggiornato alla versione 3.2.10: <a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=2562631" class="postlink" target="_blank" rel="nofollow">https://www.phpbb.com/community/viewtop ... &amp;t=2562631</a><br>
+<br>
+Se dopo l'aggiornamento doveste riscontrare anomalie segnalate nell'apposita discussione nel forum: <a href="https://forum.ubuntu-it.org/viewtopic.php?f=32&amp;t=518799" class="postlink">viewtopic.php?f=32&amp;t=518799</a></div>
+
+			
+			
+									
+									<div id="sig5217195" class="signature"><div style="text-align:center"><a href="https://janvitus.wordpress.com" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-wordpress fa-fw" aria-hidden="true"></i></a> • <a href="https://telegram.me/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-paper-plane fa-fw" aria-hidden="true"></i></a> • <a href="https://twitter.com/Janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-twitter fa-fw" aria-hidden="true"></i></a> • <a href="https://www.last.fm/it/user/Gianvito" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-lastfm fa-fw" aria-hidden="true"></i></a> • <a href="https://www.anobii.com/janvitus/profile" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-book fa-fw" aria-hidden="true"></i></a> • <a href="https://trakt.tv/users/janvitus" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-film fa-fw" aria-hidden="true"></i></a> • <a href="https://s95.photobucket.com/user/Janvitus/slideshow/Lian%20Li%20PC-Q03" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-desktop fa-fw" aria-hidden="true"></i></a>+Fedora 32 • <a href="https://icecat.biz/en-sg/p/samsung/np905s3g-k01it/ativ-notebooks-np905s3g-19202464.html" class="postlink" target="_blank" rel="nofollow"><i class="icon fa-laptop fa-fw" aria-hidden="true"></i></a>+Xubuntu 20.04</div></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Ritorna su">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Ritorna su</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=17&amp;t=637551" class="button" title="Rispondi al messaggio">
+							<span>Scrivi risposta</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Strumenti della discussione" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=17&amp;t=637551&amp;view=print" title="Stampa pagina" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Stampa pagina</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=17&amp;t=637551">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Opzioni di visualizzazione e ordinamento" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Mostra: <select name="st" id="st"><option value="0" selected="selected">Tutti i messaggi</option><option value="1">1 giorno</option><option value="7">7 giorni</option><option value="14">2 settimane</option><option value="30">1 mese</option><option value="90">3 mesi</option><option value="180">6 mesi</option><option value="365">1 anno</option></select></label>
+								<label>Ordina per: <select name="sk" id="sk"><option value="a">Autore</option><option value="t" selected="selected">Ora di invio</option><option value="s">Oggetto</option></select></label>
+				<label>Orientamento: <select name="sd" id="sd"><option value="a" selected="selected">Crescente</option><option value="d">Decrescente</option></select></label>
+								<hr class="dashed">
+				<input type="submit" class="button2" name="sort" value="Vai">
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			6 messaggi
+							• Pagina <strong>1</strong> di <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=17" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Ritorna a “Novità e aggiornamenti”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Vai a" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+				<span>Vai a</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=100" class="jumpbox-cat-link"> <span> Notizie e informazioni utili</span></a></li>
+																<li><a href="./viewforum.php?f=17" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Novità e aggiornamenti</span></a></li>
+																<li><a href="./viewforum.php?f=42" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Prime informazioni sul mondo Ubuntu</span></a></li>
+																<li><a href="./viewforum.php?f=5" class="jumpbox-cat-link"> <span> Primi passi</span></a></li>
+																<li><a href="./viewforum.php?f=43" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Dilemmi del principiante</span></a></li>
+																<li><a href="./viewforum.php?f=30" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Installazione e aggiornamento del sistema operativo</span></a></li>
+																<li><a href="./viewforum.php?f=38" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Sessione live DVD/USB</span></a></li>
+																<li><a href="./viewforum.php?f=90" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Ubuntu su macchina virtuale</span></a></li>
+																<li><a href="./viewforum.php?f=111" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=8" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Applicazioni</span></a></li>
+																<li><a href="./viewforum.php?f=75" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Applicazioni professionali</span></a></li>
+																<li><a href="./viewforum.php?f=74" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Kernel e servizi di sistema</span></a></li>
+																<li><a href="./viewforum.php?f=73" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Multimediale</span></a></li>
+																<li><a href="./viewforum.php?f=48" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Videogiochi</span></a></li>
+																<li><a href="./viewforum.php?f=54" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Software educazionale</span></a></li>
+																<li><a href="./viewforum.php?f=88" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Tecnologie assistive</span></a></li>
+																<li><a href="./viewforum.php?f=109" class="jumpbox-cat-link"> <span> Hardware</span></a></li>
+																<li><a href="./viewforum.php?f=9" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Driver e periferiche</span></a></li>
+																<li><a href="./viewforum.php?f=37" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Ubuntu Phone, PowerPC e ARM</span></a></li>
+																<li><a href="./viewforum.php?f=112" class="jumpbox-cat-link"> <span> Reti e server</span></a></li>
+																<li><a href="./viewforum.php?f=49" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Connessione e configurazione delle reti</span></a></li>
+																<li><a href="./viewforum.php?f=28" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Ubuntu su server</span></a></li>
+																<li><a href="./viewforum.php?f=102" class="jumpbox-cat-link"> <span> Ambienti desktop</span></a></li>
+																<li><a href="./viewforum.php?f=10" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; GNOME</span></a></li>
+																<li><a href="./viewforum.php?f=35" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; KDE</span></a></li>
+																<li><a href="./viewforum.php?f=58" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Altri ambienti desktop e window manager</span></a></li>
+																<li><a href="./viewforum.php?f=95" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; LXDE/LXQt</span></a></li>
+																<li><a href="./viewforum.php?f=21" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; MATE</span></a></li>
+																<li><a href="./viewforum.php?f=65" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Unity</span></a></li>
+																<li><a href="./viewforum.php?f=53" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Xfce</span></a></li>
+																<li><a href="./viewforum.php?f=15" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Personalizzazione dell'ambiente desktop</span></a></li>
+																<li><a href="./viewforum.php?f=7" class="jumpbox-cat-link"> <span> Programmazione, sicurezza e sviluppo</span></a></li>
+																<li><a href="./viewforum.php?f=70" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Progetti della Comunità</span></a></li>
+																<li><a href="./viewforum.php?f=33" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Programmazione</span></a></li>
+																<li><a href="./viewforum.php?f=91" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Strumenti per la programmazione</span></a></li>
+																<li><a href="./viewforum.php?f=34" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Sicurezza</span></a></li>
+																<li><a href="./viewforum.php?f=64" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Annunci di sicurezza</span></a></li>
+																<li><a href="./viewforum.php?f=125" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Ubuntu in sviluppo (Groovy Gorilla 20.10)</span></a></li>
+																<li><a href="./viewforum.php?f=113" class="jumpbox-cat-link"> <span> Comunità di Ubuntu-it</span></a></li>
+																<li><a href="./viewforum.php?f=40" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Consiglio della Comunità</span></a></li>
+																<li><a href="./viewforum.php?f=69" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Membership Ubuntu-it</span></a></li>
+																<li><a href="./viewforum.php?f=46" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Gruppo Documentazione</span></a></li>
+																<li><a href="./viewforum.php?f=32" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Gruppo Forum</span></a></li>
+																<li><a href="./viewforum.php?f=85" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Gruppo Promozione</span></a></li>
+																<li><a href="./viewforum.php?f=24" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Newsletter italiana</span></a></li>
+																<li><a href="./viewforum.php?f=76" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Gruppo Sviluppo</span></a></li>
+																<li><a href="./viewforum.php?f=45" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Gruppo Web</span></a></li>
+																<li><a href="./viewforum.php?f=105" class="jumpbox-cat-link"> <span> Comunità del forum</span></a></li>
+																<li><a href="./viewforum.php?f=55" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Bacheca eventi</span></a></li>
+																<li><a href="./viewforum.php?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Bar Sport</span></a></li>
+																<li><a href="./viewforum.php?f=67" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Bar Ubuntu</span></a></li>
+																<li><a href="./viewforum.php?f=97" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Altre distribuzioni e sistemi operativi</span></a></li>
+																<li><a href="./viewforum.php?f=96" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Consigli per gli acquisti</span></a></li>
+																<li><a href="./viewforum.php?f=3" class="jumpbox-cat-link"> <span> Archivio del forum</span></a></li>
+																<li><a href="./viewforum.php?f=4" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Sezioni chiuse o archiviate</span></a></li>
+																<li><a href="./viewforum.php?f=36" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Architettura x86_64</span></a></li>
+																<li><a href="./viewforum.php?f=61" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Architetture meno diffuse</span></a></li>
+																<li><a href="./viewforum.php?f=99" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; CD italiano di Ubuntu-it</span></a></li>
+																<li><a href="./viewforum.php?f=81" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Precedenti Ubuntu in sviluppo</span></a></li>
+																<li><a href="./viewforum.php?f=52" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Hoary 5.04</span></a></li>
+																<li><a href="./viewforum.php?f=51" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Breezy 5.10</span></a></li>
+																<li><a href="./viewforum.php?f=50" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Dapper 6.06</span></a></li>
+																<li><a href="./viewforum.php?f=59" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Edgy 6.10</span></a></li>
+																<li><a href="./viewforum.php?f=63" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Feisty 7.04</span></a></li>
+																<li><a href="./viewforum.php?f=71" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Gutsy 7.10</span></a></li>
+																<li><a href="./viewforum.php?f=80" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Hardy 8.04</span></a></li>
+																<li><a href="./viewforum.php?f=82" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Intrepid 8.10</span></a></li>
+																<li><a href="./viewforum.php?f=83" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Jaunty 9.04</span></a></li>
+																<li><a href="./viewforum.php?f=84" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Karmic 9.10</span></a></li>
+																<li><a href="./viewforum.php?f=87" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Lucid 10.04</span></a></li>
+																<li><a href="./viewforum.php?f=89" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Maverick 10.10</span></a></li>
+																<li><a href="./viewforum.php?f=92" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Natty Narwhal 11.04</span></a></li>
+																<li><a href="./viewforum.php?f=93" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Oneiric Ocelot 11.10</span></a></li>
+																<li><a href="./viewforum.php?f=98" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Precise Pangolin 12.04</span></a></li>
+																<li><a href="./viewforum.php?f=12" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Quantal Quetzal 12.10</span></a></li>
+																<li><a href="./viewforum.php?f=14" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Raring Ringtail 13.04</span></a></li>
+																<li><a href="./viewforum.php?f=16" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Saucy Salamander 13.10</span></a></li>
+																<li><a href="./viewforum.php?f=18" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Trusty Tahr 14.04</span></a></li>
+																<li><a href="./viewforum.php?f=19" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Utopic Unicorn 14.10</span></a></li>
+																<li><a href="./viewforum.php?f=20" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Vivid Vervet 15.04</span></a></li>
+																<li><a href="./viewforum.php?f=22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Wily Werewolf 15.10</span></a></li>
+																<li><a href="./viewforum.php?f=23" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Xenial Xerus 16.04</span></a></li>
+																<li><a href="./viewforum.php?f=27" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Yakkety Yak 16.10</span></a></li>
+																<li><a href="./viewforum.php?f=118" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Zesty Zapus 17.04</span></a></li>
+																<li><a href="./viewforum.php?f=119" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Artful Aardvark 17.10</span></a></li>
+																<li><a href="./viewforum.php?f=120" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Bionic Beaver 18.04</span></a></li>
+																<li><a href="./viewforum.php?f=121" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Cosmic Cuttlefish 18.10</span></a></li>
+																<li><a href="./viewforum.php?f=122" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Disco Dingo 19.04</span></a></li>
+																<li><a href="./viewforum.php?f=123" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Eoan Ermine 19.10</span></a></li>
+																<li><a href="./viewforum.php?f=124" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Focal Fossa 20.04</span></a></li>
+																<li><a href="./viewforum.php?f=57" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Quarantena</span></a></li>
+																<li><a href="./viewforum.php?f=68" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Risoluzione controversie</span></a></li>
+																<li><a href="./viewforum.php?f=56" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>↳ &nbsp; Sondaggi</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3><a href="./viewonline.php">Chi c’è in linea</a></h3>
+		<p>Visualizzano questa sezione: 0 utenti iscritti e 1 ospite</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="./index.php" data-navbar-reference="index" title="Indice"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Indice</span></a></span>					</li>
+		
+				<li class="responsive-menu hidden rightside dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="rightside">Tutti gli orari sono UTC+02:00 Europa/Roma</li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Elimina cookie</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://wiki.ubuntu-it.org/GruppoForum" title="Pagina wiki del Gruppo Forum" target="_blank" role="menuitem">
+					<i class="icon fa-user-circle-o fa-fw" aria-hidden="true"></i><span>Gruppo Forum</span>
+				</a>
+			</li>
+					<li class="rightside" data-last-responsive="true">
+		<a href="/app.php/contactadmin" role="menuitem">
+			<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contattaci</span>
+		</a>
+	</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Basato su <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited • <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a>© • Megmoticons©</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms" title="Condizioni" role="menuitem">
+				<span class="footer-link-text">Condizioni</span>
+			</a>
+		</p>
+				<p class="footer-row">
+			<span class="footer-info"><span title="SQL time: 0.000s / PHP time: 0.379s">Time: 0.380s</span> | <span title="Cached: 5">Queries: 19</span> | Peak Memory Usage: 17.07 MiB | GZIP: On</span>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="Errore AJAX" data-ajax-error-text="Qualcosa è andato storto durante l’analisi della richiesta." data-ajax-error-text-abort="L’utente ha abortito la richiesta." data-ajax-error-text-timeout="La richiesta è scaduta: riprovare" data-ajax-error-text-parsererror="Qualcosa è andato storto con la richiesta e il server ha restituito una risposta non valida.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Errore" data-l-timeout-processing-req="Richiesta scaduta.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	</div>
+
+<script src="./assets/javascript/jquery.min.js?assets_version=90"></script>
+<script src="./assets/javascript/core.js?assets_version=90"></script>
+
+<!--	<script src="./assets/cookieconsent/cookieconsent.min.js?assets_version=90"></script>
+	<script>
+		if (typeof window.cookieconsent === "object") {
+			window.addEventListener("load", function(){
+				window.cookieconsent.initialise({
+					"palette": {
+						"popup": {
+							"background": "#0F538A"
+						},
+						"button": {
+							"background": "#E5E5E5"
+						}
+					},
+					"theme": "classic",
+					"content": {
+						"message": "Questo\u0020forum\u0020usa\u0020dei\u0020cookie\u0020per\u0020assicurare\u0020una\u0020migliore\u0020esperienza\u0020d\u2019uso.",
+						"dismiss": "Accetto",
+						"link": "Per\u0020saperne\u0020di\u0020pi\u00F9",
+						"href": "./ucp.php?mode=privacy"
+					}
+				});
+			});
+		}
+	</script> RIMUOVERE PER IL BANNER DEI COOKIE GDPR -->
+	<script src="https://www.ubuntu-it.org/sites/all/themes/light-drupal-theme/js/cookies.js"></script>
+
+<script>
+var $imgur = {
+	config: {
+		types: 'text,url,image,thumbnail'
+	},
+	lang: {
+		error: 'Errore',
+		imageTooBig: 'L\u2019immagine\u0020\u003Csamp\u003E\u007Bfile\u007D\u003C\/samp\u003E\u0020\u00E8\u0020\u003Ccode\u003E\u007Bsize\u007D\u003C\/code\u003E\u0020MiB\u0020e\u0020deve\u0020essere\u0020inferiore\u0020a\u0020\u003Ccode\u003E\u007Bmax_size\u007D\u003C\/code\u003E\u0020MiB.',
+		noImages: 'Non\u0020ci\u0020sono\u0020immagini\u0020da\u0020caricare.',
+		uploadProgress: '\u007Bpercentage\u007D\u0025\u0020\u0028\u007Bloaded\u007D\u0020\/\u0020\u007Btotal\u007D\u0020MiB\u0029'
+	}
+};
+</script><div id="imgur-progress-wrapper">
+	<div id="imgur-progress-label"><code></code></div>
+	<progress id="imgur-progress" max="100"></progress>
+</div>
+<script>
+var $spoiler = {
+	lang: {
+		show: 'Mostra',
+		hide: 'Nascondi'
+	}
+};
+</script>	<div id="quick-login-bg" class="quick-login-bg"></div>
+<form method="post" action="./ucp.php?mode=login">
+<div class="panel" id="quick-login-panel">
+	<div class="inner">
+		<div class="content">
+			<!-- FONT AWESOME <a href="#" class="close"></a> -->
+			<a href="#" class="close"><i class="icon fa-window-close fa-fw" aria-hidden="true"></i></a>
+			<h3><a href="./ucp.php?mode=login">Accedi</a>&nbsp; • &nbsp;<a href="./ucp.php?mode=register">Iscriviti</a></h3>
+
+			<fieldset>
+				<dl class="ql-username">
+					<dt><label for="ql-username">Nome utente:</label></dt>
+					<dd class="input-container"><input type="text" tabindex="1" name="username" id="ql-username" size="25" value="" class="inputbox autowidth"></dd>
+				</dl>
+				<dl class="ql-password">
+					<dt><label for="ql-password">Password:</label></dt>
+					<dd class="input-container"><input type="password" tabindex="2" id="ql-password" name="password" size="25" class="inputbox autowidth"></dd>
+					<dd class="input-link"><a href="./ucp.php?mode=sendpassword">Password dimenticata</a></dd>				</dl>
+							</fieldset>
+
+			<fieldset class="ql-options">
+				<label for="ql-autologin"><input type="checkbox" name="autologin" id="ql-autologin" tabindex="4"><span>Collegare in automatico a ogni visita</span></label><br>				<label for="ql-viewonline"><input type="checkbox" name="viewonline" id="ql-viewonline" tabindex="5"><span>Nascondere il proprio stato per questa sessione</span></label>
+			</fieldset>
+
+			<fieldset class="submit-buttons">
+				<input type="submit" name="login" tabindex="6" value="Accedi" class="button1">
+				<input type="hidden" name="redirect" value="./viewtopic.php?f=17&amp;t=637551">
+<input type="hidden" name="creation_time" value="1598514093">
+<input type="hidden" name="form_token" value="1d3bcec249d05fbd3d9d3d88bfed641e71051d39">
+
+			</fieldset>
+
+							<hr><p class="ql-oauth">					<a href="./ucp.php?mode=login&amp;login=external&amp;oauth_service=facebook">Facebook</a>
+				&nbsp;•&nbsp;												<a href="./ucp.php?mode=login&amp;login=external&amp;oauth_service=google">Google</a>
+				&nbsp;•&nbsp;												<a href="./ucp.php?mode=login&amp;login=external&amp;oauth_service=twitter">Twitter</a>
+				</p>					</div>
+	</div>
+</div>
+</form>
+
+<script>
+(function($) {
+	$(document).ready(function() {
+		var $button = $("li a[title='Accedi']"),
+			ql_bg = '#quick-login-bg',
+			ql_pnl = '#quick-login-panel',
+			pS_bg = '#darkenwrapper';
+
+		if ($(pS_bg).length) {
+			ql_bg = pS_bg;
+		}
+		$button.click(function(e){
+			e.preventDefault();
+			$(ql_bg + ', ' + ql_pnl).fadeIn(300);
+		});
+		$(ql_bg + ', #quick-login-panel .close').click(function () {
+			$(ql_bg + ', ' + ql_pnl).fadeOut(300);
+		})
+	});
+})(jQuery);
+</script>
+											<script>
+		var vseLightbox = {};
+		vseLightbox.resizeHeight = 600;
+		vseLightbox.resizeWidth = 800;
+		vseLightbox.lightboxGal = 2;
+		vseLightbox.lightboxSig = 0;
+		vseLightbox.imageTitles = 0;
+		vseLightbox.lightboxAll = 1;
+		vseLightbox.downloadFile = 'download/file.php';
+	</script>
+<div class="scroll-page">
+	<i class="scroll-up"></i>
+	<i class="scroll-down"></i>
+</div>
+
+<script>
+
+(function($) { // Avoid conflicts with other libraries
+
+'use strict';
+
+$(function() {
+	var settings = {
+			min: 650,
+			scrollSpeed: 400
+		},
+		button = $('.scroll-page'),
+		buttonHidden = true;
+
+	$(window).scroll(function() {
+		var pos = $(this).scrollTop();
+		if (pos > settings.min && buttonHidden) {
+			button.stop(true, true).fadeIn();
+			buttonHidden = false;
+		} else if(pos <= settings.min && !buttonHidden) {
+			button.stop(true, true).fadeOut();
+			buttonHidden = true;
+		}
+	});
+
+	var scrollPage = function() {
+		$('html, body').animate({
+			scrollTop: ($(this).hasClass('scroll-up')) ? 0 : $(document).height()
+		}, settings.scrollSpeed);
+	};
+
+	$('.scroll-page > i').bind('click touchstart', scrollPage);
+});
+
+})(jQuery);
+
+</script>
+
+<div id="footer"><p>Ubuntu e Canonical sono marchi registrati da Canonical Ltd.</p></div>
+
+
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=90"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=90"></script>
+<script src="./ext/vse/lightbox/styles/all/template/js/resizer.js?assets_version=90"></script>
+<script src="./ext/vse/lightbox/styles/all/template/lightbox/js/lightbox.min.js?assets_version=90"></script>
+<script src="./ext/alfredoramos/imgur/styles/all/theme/js/formdata.min.js?assets_version=90"></script>
+<script src="./ext/alfredoramos/imgur/styles/all/theme/js/functions.js?assets_version=90"></script>
+<script src="./ext/alfredoramos/imgur/styles/all/theme/js/imgur.js?assets_version=90"></script>
+<script src="./ext/alfredoramos/simplespoiler/styles/all/theme/js/spoiler.js?assets_version=90"></script>
+<script src="./ext/primehalo/primepostrevisions/styles/all/template/diff_match_patch.js?assets_version=90"></script>
+
+
+<script id="ppr-cmpout-tpl" type="text/x-jsrender">
+<div class="post has-profile bg3 comparison" id="<<:cmpId>>" style="display:none;">
+	<div class="inner">
+		<dl class="postprofile">
+			<dt class="has-avatar">
+				<div style="text-align:center;display:flex;flex-direction:column;justify-content:center;font-size:10vmin;">
+					<i class="fa fa-arrow-up"></i>
+				</div>
+			</dt>
+		</dl>
+		<div class="postbody">
+			<div class="content"><<:cmpHtml>></div>
+		</div>
+	</div>
+</div>
+</script>
+<script id="ppr-cmpbtn-tpl" type="text/x-jsrender">
+<li>
+	<span class="button icon-button compare" data-cmp="<<:cmpId>>" title="Compara">
+		<i class="icon fa-balance-scale fa-fw"><span class="sr-only">Compara</span></i>
+	</span>
+</li>
+</script>
+<script>
+$postList = $('#revisions_form div.post');
+for (let i = 0, len = $postList.length; i < len - 1; i++) {
+	let $postA	= $postList.eq(i);
+	let $postB	= $postList.eq(i + 1);
+	let $htmlA	= $('div.content', $postA).html().replace(/<br>/g, '');
+	let $htmlB	= $('div.content', $postB).html().replace(/<br>/g, '');
+	let dmp		= new diff_match_patch();
+	let diffs	= dmp.diff_main($htmlB, $htmlA);
+
+	let cmpHtml	= dmp.diff_prettyHtml(diffs).replace(/&lt;(img.*)&gt;/g, '<$1>');
+	let matches = cmpHtml.match(/<ins [^>]+>(.*?)<\/ins>|<del [^>]+>(.*?)<\/del>/g)
+	if (matches != null)
+	{
+		matches.map(function(val) {
+			cmpHtml = cmpHtml.replace(val, val.replace(/&para;/g, '&crarr;'));
+		});
+	}
+	cmpHtml = cmpHtml.replace(/&para;/g, '');
+
+	let cmpId	= 'cmp-' + i + '-' + (i + 1);
+	let cmpBtn	= $('#ppr-cmpbtn-tpl').html().replace(/<<:cmpId>>/g, cmpId);
+	let cmpOut	= $('#ppr-cmpout-tpl').html().replace(/<<:cmpId>>/g, cmpId).replace(/<<:cmpHtml>>/g, cmpHtml);
+	$postA.after(cmpOut);
+	$postB.find('.post-buttons').prepend(cmpBtn);
+}
+$('div.post').on('click', 'span.button.compare', function() {
+	let cmpId = $(this).data('cmp');
+	$('#' + cmpId).slideToggle();
+});
+</script>
+<script>
+	lightbox.option({
+		'albumLabel': 'Immagine\u0020\u00251\u0020di\u0020\u00252'
+	});
+</script>
+
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev" aria-label="Previous image" href=""></a><a class="lb-next" aria-label="Next image" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><div><div style="position: fixed; z-index: 4814; bottom: 0px;            background: #ffffff; width: 100%;            border-top: 2px solid rgb(221, 72, 20);" id="_ubuntu-it_cookie_policy">    <div style="float: left; padding: 5px 20px;">         Confermare l'impiego di cookie da parte dei         portali di Ubuntu-it per fornirti una migliore         esperienza d'uso nei servizi offerti.    </div>    <div style="float: right;">        <a style="display: inline-block; padding: 5px                  10px 5px 0px;" href="https://www.ubuntu-it.org/cookies">            Maggiori informazioni        </a>        <a style="display: inline-block; background:                  #dd4814; color: #ffffff; padding:                  5px 20px;" href="#cookies-ok" onclick="set_cookie_policy(); return false;">            Accetto        </a>    </div></div></div></body></html>

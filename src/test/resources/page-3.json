@@ -1,0 +1,66 @@
+{
+  "threadId": 637551,
+  "totalThreadPosts": 6,
+  "posts": [
+    {
+      "author": {
+        "id": 575,
+        "joined":  "lunedì 25 aprile 2005, 15:52",
+        "username": "Janvitus",
+        "postCount": 18134
+      },
+      "content": "Questo aggiornamento ci ha fatto tribolare un bel po', il database non si voleva aggiornare e l'operazione ha preso più del giorno previsto... Comunque, dopo anni di rinvii e lavoro finalmente siamo riusciti ad aggiornare il forum all'ultima versione disponibile del ramo 3.2 di phpBB, esattamente la 3.2.9. Per conoscere le nuove funzionalità si consiglia agli utenti di consultare il proprio pannello di controllo utente, ma in generale alcune nuove funzionalità sono visibili usando il forum. Come ogni grosso aggiornamento, qualcosa potrebbe esserci sfuggita, segnalate nell'apposita discussione nella sezione del Gruppo Forum, qui: viewtopic.php?f=32&t=518799&start=1720. La traduzione del forum è stata ritradotta e corretta da me, se notate errori di grammatica e ortografia, segnalate sempre nella sopracitata discussione. Per il resto, devo ringraziare soprattutto Barrnet, senza il suo aiuto l'aggiornamento non ci sarebbe stato, è lui che si è occupato della conversione del tema dalla vecchia versione del forum al nuovo. Poi c'è da ringraziare Ubunuovo che si è occupato di aggiornare le icone delle sezioni e delle discussioni, insomma, quelle rotonde e grandi, il resto sono FontAwesome (altra nuova funzionalità del forum). In ultimo, un piccolo ringraziamento anche a mapreri che mi ha supportato in alcune cose della parte tecnica esterna al forum. Un'ultima avviso: nei prossimi giorni ci potrebbero essere piccole manutenzioni del forum, è cosa normale, e segnalo anche che siamo già a conoscenza del problema con le citazioni precedenti a questo aggiornamento, e anche gli spoiler, vedremo di risolvere nelle prossime settimane. Non si trattano di problematiche che inficiano l'uso e la stabilità del forum, ma solo \"l'estetica\", esempi qui e qui. Sempre riguardo gli errori, i tipi di accesso alternativi saranno attivi al più presto (twitter, google, ecc.), non si potevano configurare con il forum disattivato. Quindi, non segnalate queste errori nell'apposita discussione. Buon forum.",
+      "date": "martedì 21 gennaio 2020, 14:24"
+    },
+    {
+      "author": {
+        "id": 575,
+        "joined":  "lunedì 25 aprile 2005, 15:52",
+        "username": "Janvitus",
+        "postCount": 18134
+      },
+      "content": "Avviso: sappiamo delle difficoltà quando si invia o si modifica un messaggio, il forum carica all'infinito e sembra che non invia il messaggio ma lo ha già fatto. Quindi NON fate clic decine di volte su Invia perché creerete solo doppioni.",
+      "date": "giovedì 23 gennaio 2020, 19:20"
+    },
+    {
+      "author": {
+        "id": 575,
+        "joined":  "lunedì 25 aprile 2005, 15:52",
+        "username": "Janvitus",
+        "postCount": 18134
+      },
+      "content": "I metodi alternativi di accesso al forum, facebook, google e twitter, ora funzionano senza problemi. Potete abilitarli dal pannello di controllo utente > profilo > gestione associazioni account esterni. In futuro si cercherà di aggiungere anche Ubuntu Single Sign On (SSO). Inoltre, funziona di nuovo il sistema di notiche e messaggi Jabber/XMPP, per chi ancora ne fa uso. L'account Jabber lo potete aggiungere nella scheda modifica profilo nel pcu, e poi abilitare le varie opzioni per le notifiche. Inoltre, è possibile mandare messaggi diretti dal forum. (icona contatto sotto l'avatar dell'utente o dalla pagina account)",
+      "date": "martedì 28 gennaio 2020, 12:16"
+    },
+    {
+      "author": {
+        "id": 575,
+        "joined":  "lunedì 25 aprile 2005, 15:52",
+        "username": "Janvitus",
+        "postCount": 18134
+      },
+      "content": "È stata aggiunta la possibilità di caricare le immagini su Imgur, per farlo basta andare nell'editor completo e selezionare la scheda in basso \"Imgur\" e fare clic sull'immagine verde: Schermata da 2020-02-25 12-55-09.png Si possono caricare più immagini facendo altri clic sull'immagine verde. Nei prossimi giorni sarà aggiunto anche il bbcode fra gli altri disponibili.",
+      "date": "martedì 25 febbraio 2020, 12:59"
+    },
+    {
+      "author": {
+        "id": 575,
+        "joined":  "lunedì 25 aprile 2005, 15:52",
+        "username": "Janvitus",
+        "postCount": 18134
+      },
+      "content": "È stato attivato il sistema di menzioni anche per gli utenti. Le menzioni funzionano similarmente a quelle usate sulle reti sociali, tipo Twitter, Facebook, eccetera. Chi viene menzionato riceverà una notifica, sempre se è stata abilitata dal pannello di controllo utente > preferenze forum > opzioni notifiche. Per menzionare qualcuno, basta iniziare a scrivere il nome utente dopo la @ e alla terza lettera inserita il sistema vi proporrà un elenco con i nomi, basta selezionare quello interessato. Esempio: Schermata da 2020-03-10 21-12-46.png Il nome apparirà in viola ubuntu: @Janvitus In alternativa, si può usare [ mention ]nome[ /mention ] (gli spazi sono da togliere). Poi si vedrà se aggiungerlo nell'elenco dei bbcode.",
+      "date": "mercoledì 11 marzo 2020, 1:32"
+    },
+    {
+      "author": {
+        "id": 575,
+        "joined":  "lunedì 25 aprile 2005, 15:52",
+        "username": "Janvitus",
+        "postCount": 18134
+      },
+      "content": "Il software alla base del forum, phpBB, è stato aggiornato alla versione 3.2.10: https://www.phpbb.com/community/viewtop ... &t=2562631 Se dopo l'aggiornamento doveste riscontrare anomalie segnalate nell'apposita discussione nel forum: viewtopic.php?f=32&t=518799",
+      "date": "venerdì 21 agosto 2020, 16:50"
+    }
+  ]
+}

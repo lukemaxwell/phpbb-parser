@@ -6,18 +6,24 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import xyz.codepunk.phpbbparser.common.BaseParser;
 import xyz.codepunk.phpbbparser.exceptions.ParserException;
+import xyz.codepunk.phpbbparser.exceptions.TranslationException;
 import xyz.codepunk.phpbbparser.models.Author;
 import xyz.codepunk.phpbbparser.models.Post;
 import xyz.codepunk.phpbbparser.models.PostsPage;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
+import java.util.logging.Logger;
 
 
 public class PostsPageParser extends BaseParser {
     final static ArrayList<String> authorXpaths = new ArrayList<>(Arrays.asList("span.username-coloured", "a.username-coloured", "a.username", "p a[href*=\"memberlist\"]"));
-    final static ArrayList<String> threadIdXpaths = new ArrayList<>(Arrays.asList("h2.topic-title > a", "div.topic-actions > div > div > a"));
+    final static ArrayList<String> threadIdXpaths = new ArrayList<>(Arrays.asList("h2.topic-title > a", "div.topic-actions > div > div > a", "h2 > a"));
     final static ArrayList<String> authorIdXpaths = new ArrayList<>(Arrays.asList("dd.profile-posts > a", "p a[href*=\"memberlist\"]"));
+    final static Logger logger = Logger.getLogger(PostsPageParser.class.getName());
+
     /**
      * Parse the thread ID.
      *
@@ -70,8 +76,8 @@ public class PostsPageParser extends BaseParser {
         try {
             final String username = parsePostAuthorUsername(html);
             final int id = parsePostAuthorId(html);
-            final String joined = parsePostAuthorJoinDate(html);
-            final int postCount = parsePostAuthorPostCount(html);
+            final Optional<String> joined = parsePostAuthorJoinDate(html);
+            final Optional<Integer> postCount = parsePostAuthorPostCount(html);
             return new Author(id, username, postCount, joined);
         } catch(Exception e) {
             e.printStackTrace();
@@ -114,25 +120,31 @@ public class PostsPageParser extends BaseParser {
       }
     }
 
+
     /**
      * Parse post author post count.
      *
      * @param html the post html
      * @return the integer post count
      * @throws ParserException if author post count cannot be parsed
+     * @throws TranslationException if translation keyword is missing
      */
-
-    public static int parsePostAuthorPostCount(String html) throws ParserException {
+    public static Optional<Integer> parsePostAuthorPostCount(String html) throws ParserException, TranslationException {
         final Document document = Jsoup.parse(html);
         final Elements elements = document.select("dl.postprofile > dd");
+        // Try iteration of elements - only works in English
         for(Element element: elements) {
             final String text = element.text();
-            if(text.contains("Posts")) {
-                return Integer.parseInt(element.text().replace("Posts:", "").strip());
+            if(containsTextOrTranslation(text, "posts")) {
+                String elementText = replaceTextOrTranslation(element.text(), "posts", "");
+                elementText = elementText.replace(":", "").strip();
+                return Optional.of(Integer.parseInt(elementText));
             }
         }
-        throw new ParserException("Could not parse author posst count");
+        logger.warning("Could not parse author post count");
+        return Optional.empty();
     }
+
 
     /**
      * Parse post author username.
@@ -155,6 +167,13 @@ public class PostsPageParser extends BaseParser {
         throw new ParserException("Could not parse author username");
     }
 
+    /**
+     * Parse author ID from URL string.
+     *
+     * @param url the url string
+     * @return integer author ID
+     * @throws ParserException if author ID cannot be parsed
+     */
     public static int parseAuthorIdFromUrl(String url) throws ParserException {
         String authorId;
         if(url.contains("memberlist")) {
@@ -198,16 +217,19 @@ public class PostsPageParser extends BaseParser {
      * @return the author join date as string
      * @throws ParserException if author join date cannot be parsed
      */
-    public static String parsePostAuthorJoinDate(String html) throws ParserException {
+    public static Optional<String> parsePostAuthorJoinDate(String html) throws TranslationException {
         final Document document = Jsoup.parse(html);
         final Elements elements = document.select("dl.postprofile > dd");
         for(Element element: elements) {
             final String text = element.text();
-            if(text.contains("Joined")) {
-                return element.text().replace("Joined:", "").strip();
+            if(containsTextOrTranslation(text, "joined")) {
+                String elementText = replaceTextOrTranslation(element.text(), "joined", "");
+                elementText = elementText.replaceFirst(":", "").strip();
+                return Optional.of(elementText);
             }
         }
-        throw new ParserException("Could not parse author join date");
+        logger.warning("Could not parse author join date");
+        return Optional.empty();
     }
 
 
@@ -238,13 +260,15 @@ public class PostsPageParser extends BaseParser {
      * @return the integer post count
      * @throws ParserException if total thread posts cannot be parsed
      */
-    public static int parseTotalThreadPosts(String html) throws ParserException {
+    public static Optional<Integer> parseTotalThreadPosts(String html) throws ParserException {
         try {
             final Document document = Jsoup.parse(html);
-            final String elText = document.select("div.pagination").text().split("posts")[0].strip();
-            return Integer.parseInt(elText);
+            final Element element = document.selectFirst("div.pagination");
+            final String elText = splitByTextOrTranslation(element.text(), "posts")[0].strip();
+            return Optional.of(Integer.parseInt(elText));
         } catch(Exception e) {
-            throw new ParserException("Could not parse total thread posts");
+            e.printStackTrace();
+            return Optional.empty();
         }
     }
 
@@ -273,7 +297,7 @@ public class PostsPageParser extends BaseParser {
      */
     public static PostsPage parse(String html) throws ParserException {
         int threadId = parseThreadId(html);
-        int totalThreadPosts = parseTotalThreadPosts(html);
+        Optional<Integer> totalThreadPosts = parseTotalThreadPosts(html);
         ArrayList<Post> posts = parsePosts(html);
         return new PostsPage(threadId, posts, totalThreadPosts);
     }
