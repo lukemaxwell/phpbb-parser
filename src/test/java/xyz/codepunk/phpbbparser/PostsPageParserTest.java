@@ -18,7 +18,7 @@ import java.util.Collection;
 
 
 public class PostsPageParserTest extends TestCase {
-    private int dynamicTestCount = 3;
+    private int dynamicTestCount = 4;
 
     /**
      * Return test resource file as string

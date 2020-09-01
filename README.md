@@ -59,7 +59,17 @@ $ cp ../phpbb-parser/build/libs/phpbb-parser-1.0.SNAPSHOT.jar libs/
      
 ## Site Coverage
 
-The `PostsPageParser` has been tested against the following URLs:
+The `PostsPageParser` has been confirmed to function correctly for the following sites/URLs:
 
- * https://forum.openoffice.org/en/forum/viewtopic.php?f=5&t=102832
+1. [OpenOffice forum](https://forum.openoffice.org/en/forum/viewtopic.php?f=5&t=102832)
+2. [Joomla forum](https://forum.joomla.org/viewtopic.php?f=706&t=976319)
+3. [Ubuntu forum](https://forum.ubuntu-it.org/viewtopic.php?f=17&t=637551)
+4. [Pixelmator forum](http://www.pixelmator.com/community/viewtopic.php?f=18&t=17730)
+5. [VLC forum](https://forum.videolan.org/viewtopic.php?f=12&t=154744)
+6. [Virtualbox forum](https://forums.virtualbox.org/viewtopic.php?f=35&t=96608)
+7. [Mozillaline](http://forums.mozillazine.org/viewtopic.php?f=7&t=3034017)
+8. [Debian forum](http://forums.debian.net/viewtopic.php?f=17&t=147212)
+9. [Raspberry Pi forum](https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=187256)
+10. [Adblock Plus forum](https://adblockplus.org/forum/viewtopic.php?f=10&t=75244)
+11. [Arstechnica forum](https://arstechnica.com/civis/viewtopic.php?f=6&t=1444785)
 

@@ -1,0 +1,77 @@
+{
+  "threadId": 17730,
+  "posts": [
+    {
+      "author": {
+        "id": 17785,
+        "username": "Andrius"
+      },
+      "content": "From now on, we plan to start releasing tutorials and user materials more regularly and if anyone has any ideas or suggestions for what you'd like us to cover, feel free to post them here. We'll keep them in mind!",
+      "date": "Apr 30, 2020"
+    },
+    {
+      "author": {
+        "id": 23357,
+        "username": "Fish"
+      },
+      "content": "I’d love to see a tutorial that covers the differences between the colour balance, levels, and circles adjustments, and how they interact with each other. For example, is colour balance just another way of achieving the same results as levels & curves, advantages of using one over the other, etc. From the Pixelmator Photo user guide: “The Curves adjustment is often regarded as a more advanced variation of the Levels adjustment. You can use it to adjust image highlights, shadows, and midtones, boost contrast, improve image colors, or create artistic effects.“ Edit - I’ve put this in the wrong forum, meant to post in Photo",
+      "date": "May 30, 2020"
+    },
+    {
+      "author": {
+        "id": 12412,
+        "username": "philwozza"
+      },
+      "content": "I would really like to see a photo stacking tutorial. A method used by astrophotographers to stack many (identical) photos on top of each other to add the layers together and make the night star sky brighter and visible.",
+      "date": "May 31, 2020"
+    },
+    {
+      "author": {
+        "id": 17785,
+        "username": "Andrius"
+      },
+      "content": "by Fish on May 30, 2020 I’d love to see a tutorial that covers the differences between the colour balance, levels, and circles adjustments, and how they interact with each other. For example, is colour balance just another way of achieving the same results as levels &amp; curves, advantages of using one over the other, etc. From the Pixelmator Photo user guide: “The Curves adjustment is often regarded as a more advanced variation of the Levels adjustment. You can use it to adjust image highlights, shadows, and midtones, boost contrast, improve image colors, or create artistic effects.“ Edit - I’ve put this in the wrong forum, meant to post in Photo Nah, this forum is totally fine! We haven't yet published any tutorials about Pixelmator Photo but we certainly will. And any tutorials related to the color adjustments in Pixelmator Pro would usually be relevant to Pixelmator Photo. by philwozza I would really like to see a photo stacking tutorial. A method used by astrophotographers to stack many (identical) photos on top of each other to add the layers together and make the night star sky brighter and visible. We'll see what we can do!",
+      "date": "Jun 01, 2020"
+    },
+    {
+      "author": {
+        "id": 23535,
+        "username": "bbech"
+      },
+      "content": "I'd be interested in some what of a structured tutorial of doing color adjustments to photos. While I have a general idea of what each slider will do it be I still feel very unsure of what I'm doing and when I've gone overboard with various settings. The tutorial videos are great but they are in what appears to the uninitiated as a random order.",
+      "date": "Jul 10, 2020"
+    },
+    {
+      "author": {
+        "id": 17785,
+        "username": "Andrius"
+      },
+      "content": "by bbech on Jul 10, 2020 I'd be interested in some what of a structured tutorial of doing color adjustments to photos. While I have a general idea of what each slider will do it be I still feel very unsure of what I'm doing and when I've gone overboard with various settings. The tutorial videos are great but they are in what appears to the uninitiated as a random order. Noted! This text tutorial is a pretty good introduction to the usual photo editing/color adjustment workflow, by the way: https://www.pixelmator.com/tutorials/re ... justments/",
+      "date": "Jul 10, 2020"
+    },
+    {
+      "author": {
+        "id": 22116,
+        "username": "Danny Sands"
+      },
+      "content": "I'd love a tutorial on preparing a version of a photo for posting on instagram, ideally showing a workflow using PP as standalone and a workflow when using as an extension. Thanks.",
+      "date": "Jul 28, 2020"
+    },
+    {
+      "author": {
+        "id": 14995,
+        "username": "JARROD"
+      },
+      "content": "As simple as it is, maybe a Quickstart tut on the new shape text feature. How to flip text from in to outside the circle (shape), how to change the size of a circular text tool, how to have lower text fixed from above when typing below a circle, that sort of thing. J",
+      "date": "Aug 10, 2020"
+    },
+    {
+      "author": {
+        "id": 1627,
+        "username": "perpetuity"
+      },
+      "content": "Yes, and how to move the text to a new location on the circle. All hidden things. by JARROD on Aug 10, 2020 As simple as it is, maybe a Quickstart tut on the new shape text feature. How to flip text from in to outside the circle (shape), how to change the size of a circular text tool, how to have lower text fixed from above when typing below a circle, that sort of thing. J",
+      "date": "Aug 21, 2020"
+    }
+  ]
+}

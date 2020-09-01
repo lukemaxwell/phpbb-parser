@@ -11,17 +11,20 @@ import xyz.codepunk.phpbbparser.models.Author;
 import xyz.codepunk.phpbbparser.models.Post;
 import xyz.codepunk.phpbbparser.models.PostsPage;
 
+import javax.swing.plaf.synth.SynthScrollBarUI;
 import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.logging.Logger;
 
 
 public class PostsPageParser extends BaseParser {
-    final static ArrayList<String> authorXpaths = new ArrayList<>(Arrays.asList("span.username-coloured", "a.username-coloured", "a.username", "p a[href*=\"memberlist\"]"));
-    final static ArrayList<String> threadIdXpaths = new ArrayList<>(Arrays.asList("h2.topic-title > a", "div.topic-actions > div > div > a", "h2 > a"));
-    final static ArrayList<String> authorIdXpaths = new ArrayList<>(Arrays.asList("dd.profile-posts > a", "p a[href*=\"memberlist\"]"));
+    final static ArrayList<String> authorUsernameXpaths = new ArrayList<>(Arrays.asList("span.username-coloured", "a.username-coloured", "a.username", "p a[href*=\"memberlist\"]", "div.postprofile > dt > a"));
+    final static ArrayList<String> threadIdXpaths = new ArrayList<>(Arrays.asList("h2.topic-title > a", "div.topic-actions > div > div > a", "h2 > a", "div.reply-button > a"));
+    final static ArrayList<String> authorIdXpaths = new ArrayList<>(Arrays.asList("dd.profile-posts > a", "p a[href*=\"memberlist\"]", "dt a[href*=\"memberlist\"]"));
+    final static ArrayList<String> postDateXpaths = new ArrayList<>(Arrays.asList("p.lastpost__date", "p.author"));
     final static Logger logger = Logger.getLogger(PostsPageParser.class.getName());
 
     /**
@@ -111,13 +114,22 @@ public class PostsPageParser extends BaseParser {
      * @throws ParserException if post date cannot be parsed
      */
     public static String parsePostDate(String html) throws ParserException {
-      try {
-          final Document document = Jsoup.parse(html);
-          final Element element = document.selectFirst("p.author");
-          return element.text().split("»")[1].strip();
-      } catch(Exception e) {
-          throw new ParserException("Could not parse post date");
-      }
+        final Document document = Jsoup.parse(html);
+        for(String xpath: postDateXpaths) {
+            try {
+                final Element element = document.selectFirst(xpath);
+                String elementText = element.text().strip();
+
+                if(elementText.contains("»")) {
+                    elementText = elementText.split("»")[1].strip();
+                }
+                elementText = elementText.replace("on", "").strip();
+                return elementText;
+            } catch(Exception e) {
+                // Do nothing, throw exception after loop
+            }
+        }
+        throw new ParserException("Could not parse post date");
     }
 
 
@@ -141,7 +153,6 @@ public class PostsPageParser extends BaseParser {
                 return Optional.of(Integer.parseInt(elementText));
             }
         }
-        logger.warning("Could not parse author post count");
         return Optional.empty();
     }
 
@@ -156,7 +167,7 @@ public class PostsPageParser extends BaseParser {
     public static String parsePostAuthorUsername(String html) throws ParserException {
 
         final Document document = Jsoup.parse(html);
-        for(String xpath: authorXpaths) {
+        for(String xpath: authorUsernameXpaths) {
             try {
                 final Element element = document.selectFirst(xpath);
                 return element.text().strip();
@@ -228,7 +239,6 @@ public class PostsPageParser extends BaseParser {
                 return Optional.of(elementText);
             }
         }
-        logger.warning("Could not parse author join date");
         return Optional.empty();
     }
 
@@ -249,6 +259,7 @@ public class PostsPageParser extends BaseParser {
            }
            return posts;
        } catch(Exception e) {
+           e.printStackTrace();
            throw new ParserException("Could not parse posts");
        }
     }
@@ -260,16 +271,19 @@ public class PostsPageParser extends BaseParser {
      * @return the integer post count
      * @throws ParserException if total thread posts cannot be parsed
      */
-    public static Optional<Integer> parseTotalThreadPosts(String html) throws ParserException {
+    public static Optional<Integer> parseTotalThreadPosts(String html) throws ParserException, TranslationException {
+        Optional<Integer> totalThreadPosts = Optional.empty();
         try {
             final Document document = Jsoup.parse(html);
             final Element element = document.selectFirst("div.pagination");
             final String elText = splitByTextOrTranslation(element.text(), "posts")[0].strip();
-            return Optional.of(Integer.parseInt(elText));
-        } catch(Exception e) {
-            e.printStackTrace();
-            return Optional.empty();
+            totalThreadPosts = Optional.of(Integer.parseInt(elText));
+        } catch(NumberFormatException e) {
+            // logger.warning("Could not format totalThreadPosts as integer");
+        } catch(NullPointerException e) {
+            // logger.warning("Could not select totalThreadPosts element");
         }
+        return totalThreadPosts;
     }
 
     /**
@@ -295,7 +309,7 @@ public class PostsPageParser extends BaseParser {
      * @return an instance of {@link PostsPage}
      * @throws ParserException if page cannot be parsed
      */
-    public static PostsPage parse(String html) throws ParserException {
+    public static PostsPage parse(String html) throws ParserException, TranslationException {
         int threadId = parseThreadId(html);
         Optional<Integer> totalThreadPosts = parseTotalThreadPosts(html);
         ArrayList<Post> posts = parsePosts(html);
