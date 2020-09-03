@@ -28,8 +28,7 @@ public class Main {
 ```
 
 ## Installation
-Clone the repository and add the jar file as a project dependency. An easy way to do so when using gradle is to
-copy it to a libs folder.
+Clone the repository and add the jar file as a project dependency. Below is a Gradle example using a libs folder.
 
 
 Clone the phpbb-parser repository:
