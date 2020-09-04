@@ -53,6 +53,8 @@ public class PostsPageParserTest extends TestCase {
 
             // Parse threadId
             tests.add(dynamicTest(String.format("parseThreadId-%d", i), () -> assertEquals(postsPage.threadId, PostsPageParser.parseThreadId(pageHtml))));
+            // Parse threadId
+            tests.add(dynamicTest(String.format("parseThreadTitle-%d", i), () -> assertEquals(postsPage.threadTitle, PostsPageParser.parseThreadTitle(pageHtml))));
             // Parse total thread post count
             tests.add(dynamicTest(String.format("parseTotalThreadPosts-%d", i), () -> assertEquals(postsPage.totalThreadPosts, PostsPageParser.parseTotalThreadPosts(pageHtml))));
             // Posts length

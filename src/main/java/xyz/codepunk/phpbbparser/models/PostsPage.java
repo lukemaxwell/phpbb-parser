@@ -13,9 +13,11 @@ public class PostsPage {
     public ArrayList<Post> posts;
     public Optional<Integer> totalThreadPosts;
     public int threadId;
+    public String threadTitle;
 
-    public PostsPage(int threadId, ArrayList<Post> posts, Optional<Integer> totalThreadPosts) {
+    public PostsPage(int threadId, String threadTitle, ArrayList<Post> posts, Optional<Integer> totalThreadPosts) {
         this.threadId = threadId;
+        this.threadTitle = threadTitle;
         this.posts = posts;
         this.totalThreadPosts = totalThreadPosts;
     }
@@ -40,7 +42,7 @@ public class PostsPage {
         for(Object post: obj.get("posts").getAsJsonArray()) {
             posts.add(Post.fromJson(post.toString()));
         }
-        final PostsPage postsPage = new PostsPage(obj.get("threadId").getAsInt(), posts, totalThreadPosts);
+        final PostsPage postsPage = new PostsPage(obj.get("threadId").getAsInt(), obj.get("threadTitle").getAsString(), posts, totalThreadPosts);
         return postsPage;
     }
 
@@ -52,6 +54,7 @@ public class PostsPage {
     public HashMap<String, Object> toHashmap() {
         HashMap<String, Object> postsPage = new HashMap<>();
         postsPage.put("threadId", this.threadId);
+        postsPage.put("threadTitle", this.threadTitle);
         if(this.totalThreadPosts.isPresent()) {
             postsPage.put("totalThreadPosts", this.totalThreadPosts.get());
         }

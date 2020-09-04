@@ -10,22 +10,19 @@ import xyz.codepunk.phpbbparser.exceptions.TranslationException;
 import xyz.codepunk.phpbbparser.models.Author;
 import xyz.codepunk.phpbbparser.models.Post;
 import xyz.codepunk.phpbbparser.models.PostsPage;
-
-import javax.swing.plaf.synth.SynthScrollBarUI;
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.OptionalInt;
-import java.util.logging.Logger;
+
 
 
 public class PostsPageParser extends BaseParser {
     final static ArrayList<String> authorUsernameXpaths = new ArrayList<>(Arrays.asList("span.username-coloured", "a.username-coloured", "a.username", "p a[href*=\"memberlist\"]", "div.postprofile > dt > a"));
     final static ArrayList<String> threadIdXpaths = new ArrayList<>(Arrays.asList("h2.topic-title > a", "div.topic-actions > div > div > a", "h2 > a", "div.reply-button > a"));
+    final static ArrayList<String> threadTitleXpaths = new ArrayList<>(Arrays.asList("h2.topic-title > a", "h2 a[href*=\"viewtopic\"]", "h1.title"));
     final static ArrayList<String> authorIdXpaths = new ArrayList<>(Arrays.asList("dd.profile-posts > a", "p a[href*=\"memberlist\"]", "dt a[href*=\"memberlist\"]"));
     final static ArrayList<String> postDateXpaths = new ArrayList<>(Arrays.asList("p.lastpost__date", "p.author"));
-    final static Logger logger = Logger.getLogger(PostsPageParser.class.getName());
+    //final static Logger logger = Logger.getLogger(PostsPageParser.class.getName());
 
     /**
      * Parse the thread ID.
@@ -46,6 +43,19 @@ public class PostsPageParser extends BaseParser {
             }
         }
         throw new ParserException("Could not parse thread ID");
+    }
+
+    public static String parseThreadTitle(String html) throws ParserException {
+        final Document document = Jsoup.parse(html);
+        for(String xpath: threadTitleXpaths) {
+            try {
+                final Element element = document.selectFirst(xpath);
+                return element.text().strip();
+            } catch(Exception e) {
+                // Do nothing, throw exception after loop
+            }
+        }
+        throw new ParserException("Could not parse thread title");
     }
 
     /**
@@ -310,9 +320,10 @@ public class PostsPageParser extends BaseParser {
      * @throws ParserException if page cannot be parsed
      */
     public static PostsPage parse(String html) throws ParserException, TranslationException {
-        int threadId = parseThreadId(html);
-        Optional<Integer> totalThreadPosts = parseTotalThreadPosts(html);
-        ArrayList<Post> posts = parsePosts(html);
-        return new PostsPage(threadId, posts, totalThreadPosts);
+        final int threadId = parseThreadId(html);
+        final String threadTitle = parseThreadTitle(html);
+        final Optional<Integer> totalThreadPosts = parseTotalThreadPosts(html);
+        final ArrayList<Post> posts = parsePosts(html);
+        return new PostsPage(threadId, threadTitle, posts, totalThreadPosts);
     }
 }

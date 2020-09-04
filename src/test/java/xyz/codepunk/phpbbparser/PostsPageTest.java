@@ -17,6 +17,7 @@ public class PostsPageTest extends TestCase {
         final String joined = "Tue Oct 29, 2019 07:09";
         final String postDate = "Wed Oct 30, 2019 07:09";
         final int threadId = 454;
+        final String threadTitle = "Some Thread Title";
         final Optional<Integer> totalThreadPosts = Optional.of(10);
         //final int totalThreadPosts = 10;
         final Author author = new Author(123, "bob", Optional.of(1234), Optional.of(joined));
@@ -24,8 +25,9 @@ public class PostsPageTest extends TestCase {
         final Post postTwo = new Post(author, postDate, "Oops upside your leg");
         posts.add(postOne);
         posts.add(postTwo);
-        final PostsPage page = new PostsPage(threadId, posts,  totalThreadPosts);
+        final PostsPage page = new PostsPage(threadId, threadTitle, posts,  totalThreadPosts);
         assertEquals(totalThreadPosts, page.totalThreadPosts);
+        assertEquals(threadTitle, page.threadTitle);
         assertEquals(threadId, page.threadId);
         assertEquals(posts, page.posts);
     }
