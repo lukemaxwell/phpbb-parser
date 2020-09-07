@@ -10,11 +10,14 @@ public class Post {
     public Author author;
     public String date;
     public String content;
+    public String html;
 
-    public Post(Author author, String date, String content) {
+
+    public Post(Author author, String date, String content, String html) {
         this.author = author;
         this.date = date;
         this.content = content;
+        this.html = html;
     }
 
     /**
@@ -26,7 +29,7 @@ public class Post {
     public static Post fromJson(String jsonString) {
         JsonObject obj = JsonParser.parseString(jsonString).getAsJsonObject();
         Author author = Author.fromJson(obj.get("author").getAsJsonObject().toString());
-        final Post post = new Post(author, obj.get("date").getAsString(), obj.get("content").getAsString());
+            final Post post = new Post(author, obj.get("date").getAsString(), obj.get("content").getAsString(), obj.get("html").getAsString());
         return post;
     }
 
@@ -40,6 +43,7 @@ public class Post {
         post.put("author", this.author.toHashmap());
         post.put("date", this.date);
         post.put("content", this.content);
+        post.put("html", this.html);
         return post;
     }
 

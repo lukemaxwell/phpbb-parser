@@ -45,6 +45,13 @@ public class PostsPageParser extends BaseParser {
         throw new ParserException("Could not parse thread ID");
     }
 
+    /**
+     * Parse the thread title
+     *
+     * @param html the full page html
+     * @return the thread title
+     * @throws ParserException if thread title cannot be parsed
+     */
     public static String parseThreadTitle(String html) throws ParserException {
         final Document document = Jsoup.parse(html);
         for(String xpath: threadTitleXpaths) {
@@ -70,7 +77,7 @@ public class PostsPageParser extends BaseParser {
             final Author author = parsePostAuthor(html);
             final String content = parsePostContent(html);
             final String date = parsePostDate(html);
-            return new Post(author, date, content);
+            return new Post(author, date, content, html);
         } catch (Exception e) {
             e.printStackTrace();
             throw new ParserException("Could not parse post");
@@ -324,6 +331,6 @@ public class PostsPageParser extends BaseParser {
         final String threadTitle = parseThreadTitle(html);
         final Optional<Integer> totalThreadPosts = parseTotalThreadPosts(html);
         final ArrayList<Post> posts = parsePosts(html);
-        return new PostsPage(threadId, threadTitle, posts, totalThreadPosts);
+        return new PostsPage(threadId, threadTitle, posts, totalThreadPosts,html);
     }
 }

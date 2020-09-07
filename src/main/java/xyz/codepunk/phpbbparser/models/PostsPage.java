@@ -14,12 +14,14 @@ public class PostsPage {
     public Optional<Integer> totalThreadPosts;
     public int threadId;
     public String threadTitle;
+    public String html;
 
-    public PostsPage(int threadId, String threadTitle, ArrayList<Post> posts, Optional<Integer> totalThreadPosts) {
+    public PostsPage(int threadId, String threadTitle, ArrayList<Post> posts, Optional<Integer> totalThreadPosts, String html) {
         this.threadId = threadId;
         this.threadTitle = threadTitle;
         this.posts = posts;
         this.totalThreadPosts = totalThreadPosts;
+        this.html = html;
     }
 
     /**
@@ -42,7 +44,7 @@ public class PostsPage {
         for(Object post: obj.get("posts").getAsJsonArray()) {
             posts.add(Post.fromJson(post.toString()));
         }
-        final PostsPage postsPage = new PostsPage(obj.get("threadId").getAsInt(), obj.get("threadTitle").getAsString(), posts, totalThreadPosts);
+        final PostsPage postsPage = new PostsPage(obj.get("threadId").getAsInt(), obj.get("threadTitle").getAsString(), posts, totalThreadPosts, obj.get("html").getAsString());
         return postsPage;
     }
 

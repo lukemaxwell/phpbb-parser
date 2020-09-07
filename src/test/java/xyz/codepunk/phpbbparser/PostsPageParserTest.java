@@ -53,7 +53,9 @@ public class PostsPageParserTest extends TestCase {
 
             // Parse threadId
             tests.add(dynamicTest(String.format("parseThreadId-%d", i), () -> assertEquals(postsPage.threadId, PostsPageParser.parseThreadId(pageHtml))));
-            // Parse threadId
+            // Check html
+            tests.add(dynamicTest(String.format("parseHtml-%d", i), () -> assertEquals(postsPage.html, pageHtml)));
+            // Parse html
             tests.add(dynamicTest(String.format("parseThreadTitle-%d", i), () -> assertEquals(postsPage.threadTitle, PostsPageParser.parseThreadTitle(pageHtml))));
             // Parse total thread post count
             tests.add(dynamicTest(String.format("parseTotalThreadPosts-%d", i), () -> assertEquals(postsPage.totalThreadPosts, PostsPageParser.parseTotalThreadPosts(pageHtml))));
@@ -64,6 +66,9 @@ public class PostsPageParserTest extends TestCase {
             for(int j=0; j<parsedPosts.size(); j++) {
                 Post expectedPost = postsPage.posts.get(j);
                 Post parsedPost = parsedPosts.get(j);
+                final String expectedHtml = expectedPost.html.replaceAll("(?m)^[ \t]*\r?\n", "").replaceAll("[\\t ]", " ");
+                // Post html
+                tests.add(dynamicTest(String.format("parsePostHtml-%d", i), () -> assertEquals(expectedHtml, parsedPost.html)));
                 // Post date
                 tests.add(dynamicTest(String.format("parsePostDate-%d", i), () -> assertEquals(expectedPost.date, parsedPost.date)));
                 // Post content
